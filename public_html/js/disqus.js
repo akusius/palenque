@@ -15,8 +15,6 @@
     }
   }
 
-  return; // TODO
-
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
