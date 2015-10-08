@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalenqueAnimation (Java Application) | The Palenque Code</title>
+    <meta name="description" content="With the PalenqueAnimation (Java) application you can follow the solution procedure interactively in 3D, from any angle, at any speed, and switching the grid on/off at will.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/apps.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/appanim.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/appanim.html">
+    <meta property="og:title" content="PalenqueAnimation (Java Application) | The Palenque Code">
+    <meta property="og:description" content="With the PalenqueAnimation (Java) application you can follow the solution procedure interactively in 3D, from any angle, at any speed, and switching the grid on/off at will.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/appanim.html">
+    <meta name="twitter:title" content="PalenqueAnimation (Java Application) | The Palenque Code">
+    <meta name="twitter:description" content="With the PalenqueAnimation (Java) application you can follow the solution procedure interactively in 3D, from any angle, at any speed, and switching the grid on/off at will.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>PalenqueAnimation<br><small>(Java Application)</small></h2>
+    </div>
+    <div id="navigation">
+      <a href="applay.html" accesskey="p" class="prev" title="PalenqueLayout (Java Application)">&larr;</a>
+      <a href="apps.html" accesskey="u" class="up" title="Application softwares">&uarr;</a>
+      <a href="appagm.html" accesskey="n" class="next" title="PalenqueAniGifMaker (Java Application)">&rarr;</a>
+    </div>
+    <div id="content">
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/anim/scsh01.png">
+          <img src="media/apps/anim/scsh01.png" alt="Initial state">
+        </a>
+      </div>
+      <h3 id="geninfo"><a class="anchor" href="#geninfo"></a>General information</h3>
+      <div class="properties">
+        <div class="property">
+          <span class="name">Name</span>
+          <span class="value">PalenqueAnimation</span>
+        </div>
+        <div class="property">
+          <span class="name">Description</span>
+          <span class="value">
+            A Java (Swing) application to view the transformational process interactively in 3D.
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Requirement</span>
+          <span class="value">
+            <a class="external" href="https://java.com">Java Runtime Environment (JRE) 7+</a>
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Links</span>
+          <span class="value">
+            <a class="external" href="https://github.com/akusius/palenque-animation/releases/latest">Latest release</a>
+            <a class="external" href="https://github.com/akusius/palenque-animation">GitHub repository</a>
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Installation</span>
+          <span class="value">
+            There is no need for installation, you should just download the
+            JAR file (<code>PalenqueAnimation.jar</code>)
+            from the <a class="external" href="https://github.com/akusius/palenque-animation/releases/latest">latest release</a> page.
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Running</span>
+          <span class="value">
+            Double-click on the downloaded <code>PalenqueAnimation.jar</code> file,
+            or (should it not start) please enter the following command:
+          </span>
+          <code class="block">
+            java -jar PalenqueAnimation.jar
+          </code>
+        </div>
+      </div>
+      <h3 id="features"><a class="anchor" href="#features"></a>Features overview</h3>
+      <p>
+        The PalenqueAnimation application can be used to play over the entire transformational
+        process (from <a href="step05.html" title="Step 5: The Three Rotations">step 5</a> to <a href="step11.html" title="Step 11: The Final Figure">step11</a>)
+        interactively in 3D. You can view the scene from any angle,
+        stop and restart the progress at any time, modify the playback speed
+        and switch the grid on/off at will.
+        Also a screenshot in the desired resolution can be taken at any state, and
+        then it can be saved to a file or copied to the clipboard.
+        Without user interaction, the camera moves automatically according to a predefined
+        program, but you can change its position and the viewing angle anytime
+        using the mouse device.
+        There are 5 different modes (play, move, rotate, zoom and combined)
+        for the interactions, and
+        the current mode defines, what type of operations can be executed with the
+        help of the mouse movements and the buttons (see below in detail).
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/anim/scsh02.png">
+          <img src="media/apps/anim/scsh02.png" alt="Sample state">
+        </a>
+      </div>
+      <p>
+        The application has a specialized rendering "engine" that is very
+        similar to the normalized mode painting
+        <a href="applay.html#ab3d" title="Function descriptions | PalenqueLayout (Java Application)">we have already seen</a> in the PalenqueLayout program
+        (in fact the rendering routines of the PalenqueAnimation have been
+        integrated in a slightly modified version into the PalenqueLayout
+        as normalized mode drawing).
+        It means that 1. the focal length is continously updated during the resizing
+        of the window, with the purpose of assuring an integer grid square size
+        (if the zoom level is 1.0, and there are no rotations); 2. the transformations are
+        precomputed in memory, the adjacent line segments are joined together and
+        then they are painted in one step, resulting in a nicer rendering.
+      </p>
+      <p>
+        The original idea for the use of this application was to embed it
+        inside the web page as an applet, but this eventually turned out to be not really practical
+        for several reasons: 1. the applets recently become a very bad reputation and without
+        signing they are effectively disabled; 2. they cannot be used on mobile devices;
+        3. the loading process is a bit slow and cumbersome.
+        So, this idea was dropped, and the program is presented now on its own, as
+        a standalone software, while for the demonstration inside the browser
+        another application was created (<a href="appagm.html" title="PalenqueAniGifMaker (Java Application)">PalenqueAniGifMaker</a>),
+        which itself can generate animated GIFs according to predefined parameters.
+        But of course the GIFs have the disadvantage of not being interactive,
+        therefore, if you can run Java applications on your computer
+        (and you are not against installing and enabling the JRE), it may be
+        advisable to follow the steps of the solution using the more feature rich
+        PalenqueAnimation.
+      </p>
+      <h3 id="functions"><a class="anchor" href="#functions"></a>Function descriptions</h3>
+      <p>
+        The functions can be accessed by clicking the buttons on the toolbar or by
+        using their shortcut keys:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/anim/toolbar.png">
+          <img src="media/apps/anim/toolbar.png" alt="Toolbar">
+        </a>
+      </div>
+      <p>
+        <span class="function">Play / stop
+          (
+          <img class="icon" src="media/apps/anim/icons/play.png" alt="icon">,
+          <kbd>Space</kbd>
+          ):
+        </span>
+        By clicking this button (or by pressing <kbd>Space</kbd>) the playback
+        can be started or stopped at any time.
+      </p>
+      <p>
+        <span class="function">To start
+          (
+          <img class="icon" src="media/apps/anim/icons/start.png" alt="icon">,
+          <kbd>Home</kbd>
+          ):
+        </span>
+        Jump back to the start of the animation.
+      </p>
+      <p>
+        <span class="function">Frame slider
+          (
+          <img class="inline" src="media/apps/anim/scsh03.png" alt="Frame slider">,
+          <kbd>&larr;</kbd>,
+          <kbd>&rarr;</kbd>
+          ):
+        </span>
+        The current frame of the animation can be set (even during playback) by clicking and moving the slider:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/anim/scsh04.png">
+          <img src="media/apps/anim/scsh04.png" alt="Frame slider set">
+        </a>
+      </div>
+      <p>
+        The left and right arrow keys can be used to skip forward and backward in
+        the transformation process.
+        Holding a modifier key down during the press of an arrow key changes the skip distance:
+        with <kbd>Shift</kbd> it is smaller,
+        with <kbd>Ctrl</kbd> (or <kbd>Meta</kbd>) it is larger,
+        and with <kbd>Alt</kbd> held down the playback skips forward to the next step or
+        back to the start of the current step.
+      </p>
+      <p>
+        <span class="function">To end
+          (
+          <img class="icon" src="media/apps/anim/icons/end.png" alt="icon">,
+          <kbd>End</kbd>
+          ):
+        </span>
+        Jump to the end of the animation and stop the playback.
+        Pressing the Play button (or <kbd>Space</kbd>) restarts the animation again.
+      </p>
+      <p>
+        <span class="function">Play mode
+          (
+          <img class="icon" src="media/apps/anim/icons/playing.png" alt="icon">,
+          <kbd>P</kbd>,
+          <kbd>1</kbd>
+          ):
+        </span>
+        In this mode pressing the left mouse button starts or stops the animation
+        (just like the Play button or the <kbd>Space</kbd> key), while the
+        right button jumps back to the start of the animation.
+        The mouse movements have no effect in this operation mode.
+      </p>
+      <p>
+        <span class="function">Move mode
+          (
+          <img class="icon" src="media/apps/anim/icons/move.png" alt="icon">,
+          <kbd>M</kbd>,
+          <kbd>2</kbd>
+          ):
+        </span>
+        In this mode dragging the mouse on the display panel (i.e. holding
+        the left mouse button down while moving the pointer) lets
+        the scene move together with the mouse.
+        Clicking with the right button resets the moving state, that is the
+        center of the grid will be placed back to the center of the scene.
+      </p>
+      <p>
+        <span class="function">Rotate mode
+          (
+          <img class="icon" src="media/apps/anim/icons/rotate.png" alt="icon">,
+          <kbd>R</kbd>,
+          <kbd>3</kbd>
+          ):
+        </span>
+        In this mode the scene can be rotated by clicking the left button and moving
+        the pointer. Clicking with the right button resets the rotation to the default
+        (i.e. to an unrotated scene).
+      </p>
+      <p>
+        <span class="function">Zoom mode
+          (
+          <img class="icon" src="media/apps/anim/icons/zoom.png" alt="icon">,
+          <kbd>Z</kbd>,
+          <kbd>4</kbd>
+          ):
+        </span>
+        In zoom mode dragging the mouse pointer up and down lets the zoom increase and decrease,
+        while the right button resets the zoom level to 1.
+      </p>
+      <p>
+        <span class="function">Combined mode: move, rotate, zoom
+          (
+          <img class="icon" src="media/apps/anim/icons/combined.png" alt="icon">,
+          <kbd>C</kbd>,
+          <kbd>5</kbd>
+          ):
+        </span>
+        In combined mode (which is the default) the dragging operation has
+        a different meaning depending on which mouse button is pressed during it:
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Button(s)</th>
+            <th>Operation</th>
+          </tr>
+          <tr>
+            <td>Left</td>
+            <td>Move</td>
+          </tr>
+          <tr>
+            <td>Right</td>
+            <td>Rotate</td>
+          </tr>
+          <tr>
+            <td>Left &amp; Right</td>
+            <td>Zoom</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span class="function">Reset state
+          (
+          <img class="icon" src="media/apps/anim/icons/reset.png" alt="icon">,
+          <kbd>Backspace</kbd>
+          ):
+        </span>
+        With this function the state of the current mode can be reset to the default.
+        In play, move, rotate and zoom mode it has the same effect as pressing the
+        right mouse button, and in combined mode it resets the move, rotate and zoom
+        state together in one step.
+      </p>
+      <p>
+        <span class="function">Automatic camera move
+          (
+          <img class="icon" src="media/apps/anim/icons/auto.png" alt="icon">,
+          <kbd>A</kbd>
+          ):
+        </span>
+        If this function is enabled (which is the default), then the camera moves
+        automatically during the animation, following a predefined path.
+        Turning this function off freezes the current state, and switching it on
+        again puts the camera back to the position determined by the "autopilot".
+        Performing any operation (moving, rotating or zooming) on the scene
+        causes this function to turn off and puts the control completely
+        in the hand of the user.
+      </p>
+      <p>
+        <span class="function">Grid
+          (
+          <img class="icon" src="media/apps/anim/icons/grid.png" alt="icon">,
+          <kbd>G</kbd>,
+          <kbd>6</kbd>
+          ):
+        </span>
+        The 51x51-sized grid can be made visible or hidden by using this function.
+      </p>
+      <p>
+        <span class="function">Speed slider
+          (
+          <img class="inline" src="media/apps/anim/scsh05.png" alt="Speed slider">,
+          <kbd>&uarr;</kbd>,
+          <kbd>&darr;</kbd>
+          ):
+        </span>
+        With this slider (or the up and down arrow keys) the speed of the playback can be set from (very) slow to (very) fast in 7 steps.
+      </p>
+      <p>
+        <span class="function">Screenshot
+          (
+          <img class="icon" src="media/apps/anim/icons/scshot.png" alt="icon">,
+          <kbd>S</kbd>
+          ):
+        </span>
+        Using this function a screenshot can be taken from the current scene in
+        the desired resolution.
+        After invoking this function the screenshot window is shown (which is
+        the standard save dialog extended by the capability of changing the
+        resolution and copying the image to the clipboard):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/anim/scsh06.png">
+          <img src="media/apps/anim/scsh06.png" alt="Screenshot dialog">
+        </a>
+      </div>
+      <p>
+        First you should set the desired resolution (if the current one is not
+        appropriate), then enter a file name (extension is not needed) and click
+        save (or hit <kbd>Enter</kbd>) in order to save the image to a PNG file,
+        or click the Clipboard button (or press <kbd>Alt</kbd>+<kbd>C</kbd>) to
+        copy it to the clipboard instead.
+      </p>
+      <p>
+        <span class="function">Information
+          (
+          <img class="icon" src="media/apps/anim/icons/info.png" alt="icon">,
+          <kbd>Alt</kbd>+<kbd>I</kbd>
+          ):
+        </span>
+        Displays a short informational text about the application and the project:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/anim/scsh07.png">
+          <img src="media/apps/anim/scsh07.png" alt="Information dialog">
+        </a>
+      </div>
+      <p>
+        To open a link in the default browser you should just click on it with the
+        left button, while pressing the right button pops up a context menu,
+        where you can also copy the link to the clipboard.
+      </p>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappanim.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappanim.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappanim.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappanim.html&amp;title=PalenqueAnimation%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappanim.html&amp;title=PalenqueAnimation%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappanim.html&amp;title=PalenqueAnimation%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=PalenqueAnimation%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappanim.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>

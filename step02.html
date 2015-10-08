@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 2: Layering and Rotating | The Palenque Code</title>
+    <meta name="description" content="Solving the code in 12 steps: in step 2 we duplicate the lid picture and layer it over itself in a rotated configuration. Quite interestingly, the triplets inside start to connect to each other.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/step02.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/step02.html">
+    <meta property="og:title" content="Step 2: Layering and Rotating | The Palenque Code">
+    <meta property="og:description" content="Solving the code in 12 steps: in step 2 we duplicate the lid picture and layer it over itself in a rotated configuration. Quite interestingly, the triplets inside start to connect to each other.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/step02.html">
+    <meta name="twitter:title" content="Step 2: Layering and Rotating | The Palenque Code">
+    <meta name="twitter:description" content="Solving the code in 12 steps: in step 2 we duplicate the lid picture and layer it over itself in a rotated configuration. Quite interestingly, the triplets inside start to connect to each other.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>Step 2: Layering and Rotating</h2>
+    </div>
+    <div id="navigation">
+      <a href="step01.html" accesskey="p" class="prev" title="Step 1: First Findings">&larr;</a>
+      <a href="steps.html" accesskey="u" class="up" title="Solving the Code in 12 Steps">&uarr;</a>
+      <a href="step03.html" accesskey="n" class="next" title="Step 3: The Interstellar Travel">&rarr;</a>
+    </div>
+    <div id="content">
+      <p>
+        Let's take a look at the lid again and concentrate now on the edges:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s02i01.png">
+          <img src="media/s02i01.png" alt="Lid with X shapes marked">
+        </a>
+      </div>
+      <p class="note">
+        Note: For this step we use a somewhat simpler drawing of the lid, created by
+        <a class="external" href="http://mauricecotterell.com/">Maurice Cotterell</a>.
+        It is a bit less accurate than the one by Greene, but can be used also in transparent mode
+        (which will be necessary in the followings).
+      </p>
+      <p>
+        The two X shapes highlighted above are (as far as I know)
+        not part of the Mayan symbols, and they certainly stand out
+        from the other symbols around the edges due to their simplicity.
+        Furthermore, the distance from the top to the vertical X's bottom
+        is equal to the width of the lid, as shown below (the two arrows
+        have the exact same length):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s02i02.png">
+          <img src="media/s02i02.png" alt="X shapes measures">
+        </a>
+      </div>
+      <p class="note">
+        Note: on the Greene version of the lid the arrows measure a (slightly) different length.
+      </p>
+      <p>
+        This might inspire us to try to make a connection between the two X shapes somehow.
+        The easiest way to achieve this could be to duplicate the whole pattern, and then
+        rotate the second layer 90° clockwise. Let's try it, and see, what we get!
+      </p>
+      <div class="img-wrapper">
+        <!--
+        ffmpeg -i s02v01.mp4 png/%03.png
+        XnView Sequence Convert PNG -> GIF
+        100 -> 101-125
+        gifsicle -\-careful -O3 -k8 -d5 -l gif/* -o s02v01.gif
+        -->
+        <a class="img" href="media/s02v01.gif">
+          <img class="anim" src="media/s02v01.gif" alt="Second layer rotation">
+        </a>
+      </div>
+      <p class="note">
+        Note: the idea of layering the pattern over itself is from a book of
+        <a class="external" href="http://mauricecotterell.com/">Maurice Cotterell</a>.
+        Bringing the X shapes to overlay each other was invented by me.
+        (About the story of the solution you can read more <a href="story.html" title="The Story Behind the Solution">here</a>).
+      </p>
+      <p>
+        Zooming into the upper part we can recognize that two X shapes are joined,
+        and also the triplets inside started to connect to each other:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s02i03.png">
+          <img src="media/s02i03.png" alt="Upper part zoomed into">
+        </a>
+      </div>
+      <p id="aba5" class="note">
+        Note: The Cotterell drawing depicts the corners a bit oversimplified.
+        In reality they are cut (or broken) not that straight, as you can see it on the more accurate
+        <a href="media/lid_greene.png">Greene version</a>.
+        I used the Cotterell one initially, and to me it was at first
+        an important clue having also the corners covering each other so nicely.
+        But for the further steps it is not relevant whether the corners are
+        also part of the code (as I tended to suppose originally),
+        or they were simply damaged e.g. during the transportation
+        (and then in a fairly lucky way).
+      </p>
+      <p>
+        As we can see, we have again two X shapes without connection
+        (one on the first layer, and one on the second):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s02i03b.png">
+          <img src="media/s02i03b.png" alt="Single X shapes highlighted">
+        </a>
+      </div>
+      <p>
+        In order to make the second one joined, we should continue the process,
+        i.e. duplicate a new layer (from layer #2) and rotate it again.
+        And to make the first one connected
+        (and together with it also the new single X shape on the third layer)
+        there will be also a 4th layer and a 3rd rotation needed:
+      </p>
+      <div class="img-wrapper">
+        <!--
+        ffmpeg -i s02v02.mp4 png/%03.png
+        XnView Sequence Convert PNG -> GIF step 2
+        115 -> 117-149
+        gifsicle -\-careful -O3 -k8 -d8 -l gif/* -o s02v02.gif
+        -->
+        <a class="img" href="media/s02v02.gif">
+          <img class="anim" src="media/s02v02.gif" alt="4 layers rotated">
+        </a>
+      </div>
+      <p>
+        Zooming in again shows (at least to some degree)
+        that each pair of the eight X shapes are joined now, and
+        we can also observe that the inner triplets are connected to each other
+        in some way.
+        But the whole picture is so overcrowded due to the other figures,
+        that we can hardly discern anything on it:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s02i04.png">
+          <img src="media/s02i04.png" alt="Upper part zoomed into">
+        </a>
+      </div>
+      <p>
+        So the next logical step will be to construct a clean and normalized version of
+        the upper part containing only the important items, then perform
+        the rotations again and see what we get.
+      </p>
+      <p>
+        But before that we make a small digression, and try to find out:
+        if the triplets and their positions indeed have a hidden meaning
+        (as it seems to become more and more probable),
+        then what type of message should we expect to be revealed,
+        what could be the story that the drawing on the lid would like to tell us?
+      </p>
+      <div class="next-page">
+        <a href="step03.html" title="Step 3: The Interstellar Travel">Continue to the next step</a>
+      </div>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep02.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep02.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep02.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep02.html&amp;title=Step%202%3A%20Layering%20and%20Rotating%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep02.html&amp;title=Step%202%3A%20Layering%20and%20Rotating%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep02.html&amp;title=Step%202%3A%20Layering%20and%20Rotating%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=Step%202%3A%20Layering%20and%20Rotating%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep02.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalenqueLayout (Java Application) | The Palenque Code</title>
+    <meta name="description" content="With the help of the PalenqueLayout (Java) application you can build new item layouts, and then test their control phase states by performing the three rotations and the reflection on them.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/apps.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/applay.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/applay.html">
+    <meta property="og:title" content="PalenqueLayout (Java Application) | The Palenque Code">
+    <meta property="og:description" content="With the help of the PalenqueLayout (Java) application you can build new item layouts, and then test their control phase states by performing the three rotations and the reflection on them.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/applay.html">
+    <meta name="twitter:title" content="PalenqueLayout (Java Application) | The Palenque Code">
+    <meta name="twitter:description" content="With the help of the PalenqueLayout (Java) application you can build new item layouts, and then test their control phase states by performing the three rotations and the reflection on them.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>PalenqueLayout<br><small>(Java Application)</small></h2>
+    </div>
+    <div id="navigation">
+      <a href="apps.html" accesskey="p" class="prev" title="Application softwares">&larr;</a>
+      <a href="apps.html" accesskey="u" class="up" title="Application softwares">&uarr;</a>
+      <a href="appanim.html" accesskey="n" class="next" title="PalenqueAnimation (Java Application)">&rarr;</a>
+    </div>
+    <div id="content">
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh01.png">
+          <img src="media/apps/lay/scsh01.png" alt="Initial state">
+        </a>
+      </div>
+      <h3 id="geninfo"><a class="anchor" href="#geninfo"></a>General information</h3>
+      <div class="properties">
+        <div class="property">
+          <span class="name">Name</span>
+          <span class="value">PalenqueLayout</span>
+        </div>
+        <div class="property">
+          <span class="name">Description</span>
+          <span class="value">
+            A Java (Swing) application to build and test various layouts (item arrangements).
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Requirement</span>
+          <span class="value">
+            <a class="external" href="https://java.com">Java Runtime Environment (JRE) 7+</a>
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Links</span>
+          <span class="value">
+            <a class="external" href="https://github.com/akusius/palenque-layout/releases/latest">Latest release</a>
+            <a class="external" href="https://github.com/akusius/palenque-layout">GitHub repository</a>
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Installation</span>
+          <span class="value">
+            There is no need for installation, you should just download the
+            JAR file (<code>PalenqueLayout.jar</code>)
+            from the <a class="external" href="https://github.com/akusius/palenque-layout/releases/latest">latest release</a> page.
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Running</span>
+          <span class="value">
+            Double-click on the downloaded <code>PalenqueLayout.jar</code> file,
+            or (should it not start) please enter the following command:
+          </span>
+          <code class="block">
+            java -jar PalenqueLayout.jar
+          </code>
+        </div>
+      </div>
+      <h3 id="features"><a class="anchor" href="#features"></a>Features overview</h3>
+      <p>
+        With the help of the PalenqueLayout application you can build a new
+        <a href="step04.html" title="Step 4: The Item Layout">item layout</a>, and then test its corresponding
+        <a href="step07.html" title="Step 7: The Control Phase">control phase state</a>
+        that results from executing the <a href="step05.html" title="Step 5: The Three Rotations">three rotational</a>
+        and the <a href="step06.html" title="Step 6: The Reflection">reflectional</a> transformations on the initial arrangement:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh02.png">
+          <img src="media/apps/lay/scsh02.png" alt="Final state">
+        </a>
+      </div>
+      <p>
+        After startup, the application displays the <a href="step04.html" title="Step 4: The Item Layout">default layout</a>,
+        together with the picture of the lid in the background and the reference numbers
+        (as seen on the first screenshot above). The items can be moved or deleted,
+        new elements can be added (to a maximum of 25 items),
+        and also the layout as a whole can be "shuffled"
+        (which moves each item away by a small amount).
+        All changes of the arrangement are registered, and the user has the possibility
+        to undo and/or redo them at will (within the limit of 100 different layouts).
+        In addition, one selected layout can
+        also be placed separately in a memory register for a later retrieving.
+        The current arrangement can be saved to a file or to the clipboard,
+        and the items data can be exported in various formats (HTML, XML, CSV, TXT).
+      </p>
+      <p>
+        In the background three additional layers can be turned on/off:
+        the picture of the lid's upper portion (from the Greene drawing),
+        the 51&times;51-sized coordinate system grid
+        and the default layout in light cyan color as a reference.
+        The opacities of the layers can be tuned on demand, and these settings are persistently
+        stored and restored between the different sessions.
+        A screenshot of the desired size can be taken at any phase of the transformations,
+        and then it can be saved to a PNG file or put directly to the clipboard.
+      </p>
+      <p>
+        Although the rendering "engine" behind the application is certainly not too advanced,
+        but it does provide some special features that
+        could be helpful during the analyzation: in normalized mode (see below) it
+        continously adjusts the focal length to assure that the small squares of the grid
+        always have an integer size (thus avoiding measurement inaccuracies and
+        rendering artifacts), and it also optimizes the drawing of these squares in a way that the
+        operations are precomputed in memory,
+        and then the adjacent line segments are all painted together in one step
+        (which prevents the segments from being drawn in small "wavering" sections and multiple times).
+      </p>
+      <h3 id="functions"><a class="anchor" href="#functions"></a>Function descriptions</h3>
+      <p>
+        The functions can be accessed by clicking the buttons on the toolbar or by
+        using their shortcut keys:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/toolbar.png">
+          <img src="media/apps/lay/toolbar.png" alt="Toolbar">
+        </a>
+      </div>
+      <p>
+        <span class="function">Select and move
+          (
+          <img class="icon" src="media/apps/lay/icons/select.png" alt="icon">,
+          <kbd>1</kbd>
+          ):
+        </span>
+        In this mode (which is the default) any item in the layout can be selected and moved
+        to a new position. At first, if the mouse pointer hits an item, its shape is changed
+        and the coordinates of this element are shown in the tooltip:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh03.png">
+          <img src="media/apps/lay/scsh03.png" alt="Item hit">
+        </a>
+      </div>
+      <p>
+        Pressing the left mouse button makes the item selected:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh04.png">
+          <img src="media/apps/lay/scsh04.png" alt="Item selected">
+        </a>
+      </div>
+      <p>
+        Now it can be moved anywhere on the layout, the new coordinates are constantly
+        updated:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh05.png">
+          <img src="media/apps/lay/scsh05.png" alt="Item moving">
+        </a>
+      </div>
+      <p>
+        Pressing the left button again relocates the item to the new position:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh06.png">
+          <img src="media/apps/lay/scsh06.png" alt="Item repositioned">
+        </a>
+      </div>
+      <p>
+        The moving operation can be canceled by using the right mouse button,
+        or by pressing the left button and holding the <kbd>Shift</kbd> key down at the same time.
+      </p>
+      <p>
+        <span class="function">Add new item
+          (
+          <img class="icon" src="media/apps/lay/icons/add.png" alt="icon">,
+          <kbd>2</kbd>
+          ):
+        </span>
+        In this mode a new item can be added to the layout. Initially a triplet
+        is displayed, together with its destination coordinates:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh07.png">
+          <img src="media/apps/lay/scsh07.png" alt="Triplet to add">
+        </a>
+      </div>
+      <p>
+        Pressing the right mouse button (or the left, while <kbd>Shift</kbd> is held) changes
+        the triplet to a Sun, and pressing once again to a star symbol:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh08.png">
+          <img src="media/apps/lay/scsh08.png" alt="Star to add">
+        </a>
+      </div>
+      <p>
+        By pressing the left mouse button the new item is placed on the layout:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh09.png">
+          <img src="media/apps/lay/scsh09.png" alt="Star added">
+        </a>
+      </div>
+      <p>
+        <span class="function">Remove item
+          (
+          <img class="icon" src="media/apps/lay/icons/remove.png" alt="icon">,
+          <kbd>3</kbd>
+          ):
+        </span>
+        After choosing this mode, any item can be removed from the layout by simply
+        clicking on it with the left mouse button.
+      </p>
+      <p>
+        <span class="function">Lid picture
+          (
+          <img class="icon" src="media/apps/lay/icons/lid.png" alt="icon">,
+          <kbd>5</kbd>
+          ):
+        </span>
+        By clicking this button (or by pressing its shortcut key) the lid picture layer
+        behind the layout can be switched on or off.
+      </p>
+      <p>
+        <span class="function">Grid
+          (
+          <img class="icon" src="media/apps/lay/icons/grid.png" alt="icon">,
+          <kbd>6</kbd>,
+          <kbd>G</kbd>
+          ):
+        </span>
+        With this function the 51&times;51-sized coordinate system grid can be displayed
+        or hidden.
+      </p>
+      <p>
+        <span class="function">Reference
+          (
+          <img class="icon" src="media/apps/lay/icons/ref.png" alt="icon">,
+          <kbd>7</kbd>
+          ):
+        </span>
+        Turning on the reference layer displays the default layout behind the current one
+        in light cyan color:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh10.png">
+          <img src="media/apps/lay/scsh10.png" alt="Reference layer">
+        </a>
+      </div>
+      <p id="a51f">
+        <span class="function">Item numbers
+          (
+          <img class="icon" src="media/apps/lay/icons/number.png" alt="icon">,
+          <kbd>8</kbd>
+          ):
+        </span>
+        By using this function the item reference numbers can be switched on or off.
+        The numbers serve exclusively the purpose of referring to the elements
+        within a single layout, and are <em>not</em> preserved between different layouts
+        (i.e. even a small item relocation might cause a complete renumbering of the items).
+        The method for determining the reference numbers must have been (over)complicated a bit
+        in order to be able to simulate algorithmically
+        the initial (rather heuristic) numbering presented in the
+        <a href="story.html#a4d9" title="The Story Behind the Solution">very first study</a>.
+      </p>
+      <p>
+        The exact procedure to determine the ordering between any two items is the following
+        (see also the <a class="external" href="https://github.com/akusius/palenque-layout/blob/master/src/hu/akusius/palenque/layout/data/LayoutItemSorter.java">source</a>):
+      </p>
+      <ol>
+        <li>three rings are defined with the radii &radic;65, &radic;150 and outside;</li>
+        <li>the item in the more inner ring is lesser (has a smaller number);</li>
+        <li>the item in the upper half is lesser than in the lower half;</li>
+        <li>the item in the left half is lesser than in the right half;</li>
+        <li>the item with a smaller X coordinate is lesser;</li>
+        <li>the item with a larger Y coordinate is lesser;</li>
+        <li>the item with a smaller item type (Triplet, Sun, Star) is lesser.</li>
+      </ol>
+      <p>
+        <span class="function">Randomize (shuffle) layout
+          (
+          <img class="icon" src="media/apps/lay/icons/random.png" alt="icon">,
+          <kbd>R</kbd>
+          ):
+        </span>
+        This function moves each item away from its current position by a small amount
+        (or leaves it in its place).
+      </p>
+      <p>
+        <span class="function">Default layout
+          (
+          <img class="icon" src="media/apps/lay/icons/reset.png" alt="icon">,
+          <kbd>D</kbd>
+          ):
+        </span>
+        Resets the layout to the default one.
+      </p>
+      <p>
+        <span class="function">Undo
+          (
+          <img class="icon" src="media/apps/lay/icons/undo.png" alt="icon">,
+          <kbd>Z</kbd>,
+          <kbd>Backspace</kbd>
+          ):
+        </span>
+        Restores the layout before the last modifying operation. Any layout changes
+        (moving, adding, removing, importing, recalling from memory, etc.) will put
+        the current layout onto the undo stack, while undoing a layout puts the current one
+        onto the redo stack.
+        By using the <kbd>Backspace</kbd> key, between the two last layouts can be switched forth and
+        back (which might be useful for comparing layouts).
+      </p>
+      <p>
+        <span class="function">Redo
+          (
+          <img class="icon" src="media/apps/lay/icons/redo.png" alt="icon">,
+          <kbd>Y</kbd>,
+          <kbd>Backspace</kbd>
+          ):
+        </span>
+        Restores the layout previously undone.
+      </p>
+      <p id="ab3d">
+        <span class="function">Normalized rendering
+          (
+          <img class="icon" src="media/apps/lay/icons/normalized.png" alt="icon">,
+          <kbd>N</kbd>
+          ):
+        </span>
+        If it is enabled (which is the default),
+        then 1. the focal length is adjusted continously during the resizing of the window,
+        so that each square grid will always have the very same (integer) size;
+        2. the operations are precomputed in memory, then the adjacent line segments
+        are joined together, and finally they are painted in a single line drawing step,
+        which results in a nicer and more accurate picture (especially in 3D).
+      </p>
+      <p>
+        Without normalized rendering there is no focal length adjusting, and the items
+        are simply painted over each other after having executed the various transformations on them.
+        Initially this was the only rendering mode, but then the normalized method
+        was integrated from the <a href="appanim.html" title="PalenqueAnimation (Java Application)">PalenqueAnimation</a> project.
+        The main reason, why this simple rendering mode remained selectable, is the fact
+        that using it (and lowering the opacity of the main layer at the same time)
+        we are able to observe the overlaps of the items after the transformations,
+        which might be advantageous during the analyzation:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s06i05.png">
+          <img class="framed" src="media/s06i05.png" alt="State after reflection with lower opacity">
+        </a>
+      </div>
+      <p>
+        <span class="function">Layout memory
+          (
+          <img class="icon" src="media/apps/lay/icons/memory.png" alt="icon">,
+          <kbd>M</kbd>
+          ):
+        </span>
+        Using this function the current layout can be placed in a memory register.
+        By clicking the button (or by pressing its shortcut key) the layout is put
+        into the memory, and the function gets deactivated.
+        After changing the layout, the button is reactivated again (in a toggled state),
+        and can be used to recall the layout from the memory (and to clear this at the same time).
+        Pressing <kbd>Shift</kbd>+<kbd>M</kbd> clears the memory without retrieving
+        the layout previously stored in it.
+        This function can be used to bring two layouts that are "far away"
+        (i.e. many operations are needed to mutate the first into the second) next to
+        each other, and then (e.g. with the help of the <kbd>Backspace</kbd> key) they can
+        be compared more comfortably.
+        Of course, the export and import functions could also serve this purpose, but for
+        a single layout using the memory might be much easier.
+      </p>
+      <p>
+        <span class="function">Export
+          (
+          <img class="icon" src="media/apps/lay/icons/export.png" alt="icon">,
+          <kbd>E</kbd>
+          ):
+        </span>
+        With this function the current layout can be exported (saved) to a file or to the clipboard.
+        After invoking this function, a dialog window pops up with the export / import code (see below) of the layout:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh11.png">
+          <img src="media/apps/lay/scsh11.png" alt="Export dialog">
+        </a>
+      </div>
+      <p>
+        With the help of the buttons
+        the code can be put to the clipboard or saved to a file (as a shortcut
+        you can use the <kbd>Alt</kbd> modifier together with the letter underlined;
+        so e.g. press <kbd>Alt</kbd>+<kbd>C</kbd> to copy the code to the clipboard,
+        or <kbd>Alt</kbd>+<kbd>F</kbd> to save it as a file).
+      </p>
+      <p>
+        The format of the layout code is the following:
+      </p>
+      <ol>
+        <li>the "PQL" (PalenqueLayout) string (case sensitive);</li>
+        <li>for each item (if any exists):
+          <ol>
+            <li>the type identifier character
+              (T&nbsp;=&nbsp;Triplet, S&nbsp;=&nbsp;Sun, R&nbsp;=&nbsp;Star);</li>
+            <li>the X coordinate in two characters;</li>
+            <li>the Y coordinate in two characters.</li>
+          </ol>
+        </li>
+      </ol>
+      <p>
+        The negative coordinates are represented in
+        <a class="external" href="https://en.wikipedia.org/wiki/Method_of_complements">ten's complement format</a>,
+        i.e. as if they were added to 100 (e.g. -20 is 80, -2 is 98).
+      </p>
+      <p>
+        <span class="function">Import
+          (
+          <img class="icon" src="media/apps/lay/icons/import.png" alt="icon">,
+          <kbd>I</kbd>
+          ):
+        </span>
+        With this function a previously exported layout can be imported (loaded) from a
+        file or from the clipboard:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh12.png">
+          <img src="media/apps/lay/scsh12.png" alt="Import dialog">
+        </a>
+      </div>
+      <p>
+        The import code can be pasted from the clipboard (<kbd>Alt</kbd>+<kbd>C</kbd>) or
+        loaded from a file (<kbd>Alt</kbd>+<kbd>F</kbd>), and it can also be manually edited.
+        To actually import the layout you should click the Import button, or press
+        <kbd>Alt</kbd>+<kbd>I</kbd> or <kbd>Ctrl</kbd>+<kbd>Enter</kbd>.
+        To interrupt the importing procedure just click the Cancel button or hit <kbd>Esc</kbd>.
+        If the code is correct, the layout is imported as the current one
+        (the previous one is placed on the top of the undo stack), otherwise an error message
+        appears:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh13.png">
+          <img src="media/apps/lay/scsh13.png" alt="Invalid data">
+        </a>
+      </div>
+      <p>
+        Because the code is normalized before importing, it can contain whitespaces
+        anywhere inside, and also the items can be in any arbitrary order.
+      </p>
+      <p>
+        <span class="function">Play / stop
+          (
+          <img class="icon" src="media/apps/lay/icons/play.png" alt="icon">,
+          <kbd>Space</kbd>
+          ):
+        </span>
+        Pressing this button starts or stops the transformation procedure.
+        The playback stops automatically at the last frame, and pressing the button
+        again restarts the process. The proceeding can be stopped at any time,
+        and any inner state can be inspected (the tooltip shows the coordinate under
+        the pointer):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh14.png">
+          <img src="media/apps/lay/scsh14.png" alt="Playback stopped">
+        </a>
+      </div>
+      <p>
+        <span class="function">To start
+          (
+          <img class="icon" src="media/apps/lay/icons/start.png" alt="icon">,
+          <kbd>Home</kbd>,
+          <kbd>C</kbd>
+          ):
+        </span>
+        Jump back to the start of the playback (to the first frame).
+        The editing functions (move, add, remove) and the item reference numbers
+        are only available at the first frame.
+        Please notice that the coordinates displayed as a tooltip are different at the first
+        frame and at the intermediate or last frames: in editing mode (first frame)
+        the tooltip appears only then, when an item is hit and then it shows the coordinate of this item
+        (i.e. of its center square), while in playback mode it shows the coordinates
+        of any square currently under the pointer.
+      </p>
+      <p>
+        <span class="function">The frame slider</span>
+        can be used to set the current frame directly (without playback):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh15.png">
+          <img src="media/apps/lay/scsh15.png" alt="Frame slider">
+        </a>
+      </div>
+      <p>
+        <span class="function">To end
+          (
+          <img class="icon" src="media/apps/lay/icons/end.png" alt="icon">,
+          <kbd>End</kbd>,
+          <kbd>V</kbd>
+          ):
+        </span>
+        Jump to the last frame, i.e. to the end of the transformations
+        (<a href="step07.html" title="Step 7: The Control Phase">control phase state</a>).
+      </p>
+      <p>
+        <span class="function">Quick playing
+          (
+          <img class="icon" src="media/apps/lay/icons/quick.png" alt="icon">,
+          <kbd>Q</kbd>
+          ) and the speed slider:
+        </span>
+        With the slider the speed of the playback can be set and modified
+        (<img class="inline" src="media/apps/lay/scsh16.png" alt="Speed slider">).
+        The Quick playing button (or its shortcut) can be used to turn the speed up to its highest value
+        temporarily (e.g. during playback), and then to restore the previous value.
+        Toggling the button sets the speed to the maximum and disables the slider
+        (<img class="inline" src="media/apps/lay/scsh17.png" alt="Speed slider in quick mode">),
+        while pressing it again restores the previous speed
+        (<img class="inline" src="media/apps/lay/scsh18.png" alt="Speed restored">).
+      </p>
+      <p>
+        <span class="function">Layer opacities
+          (
+          <img class="icon" src="media/apps/lay/icons/opacity.png" alt="icon">,
+          <kbd>O</kbd>
+          ):
+        </span>
+        Using this function the opacity values of the various layers can be modified.
+        Clicking the button (or pressing the shortcut key) brings up the opacity dialog:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh19.png">
+          <img src="media/apps/lay/scsh19.png" alt="Opacity dialog">
+        </a>
+      </div>
+      <p>
+        With the help of the sliders and the spinners
+        (<img class="inline" src="media/apps/lay/scsh20.png" alt="Spinner">)
+        the opacity value of the 4 layers (lid, grid, reference, main layer) can be
+        modified. The 0 value means full transparency, 100 means full opacity.
+        Changing the values immediately updates the picture (the dialog might be
+        moved to another position outside of the main window, if desired).
+        The changes can be finalized by clicking the OK button (or by pressing
+        <kbd>Enter</kbd> or <kbd>Alt</kbd>+<kbd>O</kbd>).
+        To cancel the changes and revert to the old values,
+        click the Cancel button, or press <kbd>Esc</kbd> (or <kbd>Alt</kbd>+<kbd>C</kbd>).
+        With the Reset button (<kbd>Alt</kbd>+<kbd>R</kbd>) the original values
+        can be restored at any time.
+        The opacity values are persisted using the
+        <a class="external" href="https://docs.oracle.com/javase/8/docs/technotes/guides/preferences/index.html">Java Preferences API</a>, and are reloaded at next startup.
+      </p>
+      <p>
+        <span class="function">Item data
+          (
+          <img class="icon" src="media/apps/lay/icons/data.png" alt="icon">,
+          <kbd>X</kbd>
+          ):
+        </span>
+        Clicking this button (or pressing the shortcut key) brings up the Item Data
+        dialog that displays the data of the layout items, and also provides
+        the possibility of exporting these data in various formats:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh21.png">
+          <img src="media/apps/lay/scsh21.png" alt="Item data dialog">
+        </a>
+      </div>
+      <p>
+        By clicking a column header the table can be reordered,
+        and the columns can be rearranged by moving the headers.
+        These changes (and also the reposition of the dialog) remain in effect during a
+        session, but are not persisted between different runnings.
+        The table can also be used to select rows and to copy these data to the clipboard
+        by pressing the corresponding operating system shortcut
+        (e.g. <kbd>Ctrl</kbd>+<kbd>C</kbd>).
+      </p>
+      <p>
+        To export the item data first you should select the desired format
+        (HTML, XML, CSV, TXT), then click the Export button (or press <kbd>Alt</kbd>+<kbd>E</kbd>).
+        The export dialog (already known from the Export function) is shown
+        with the data contained in the scrollable text panel:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh22.png">
+          <img src="media/apps/lay/scsh22.png" alt="Export data">
+        </a>
+      </div>
+      <p>
+        The buttons of this dialog can be used to copy the data to the clipboard or
+        to save it to a file (the list is filtered and the extension is appended
+        automatically):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh23.png">
+          <img src="media/apps/lay/scsh23.png" alt="Save data">
+        </a>
+      </div>
+      <p>
+        <span class="function">Screenshot
+          (
+          <img class="icon" src="media/apps/lay/icons/scshot.png" alt="icon">,
+          <kbd>S</kbd>
+          ):
+        </span>
+        With this function the current state of the display (i.e. the upper) panel
+        can be saved to a file or put directly to the clipboard.
+        After invoking it the general save dialog is shown,
+        which is extended by the possibility
+        of changing the resolution (in pixels) and copying the image directly to the clipboard
+        (instead of saving it to a file):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh24.png">
+          <img src="media/apps/lay/scsh24.png" alt="Screenshot dialog">
+        </a>
+      </div>
+      <p>
+        To save the image into a PNG file enter the name (extension not needed) and click the
+        Save button (or press <kbd>Enter</kbd>). To copy to the clipboard click the
+        Clipboard button (or press <kbd>Alt</kbd>+<kbd>C</kbd>), which copies the image
+        and also closes the dialog.
+        Please note that the state of the rendering mode (normalized or not) affects
+        also the painting of the screenshot image (the application rerenders the scene
+        completely with the resolution specified,
+        and then saves or copies it to the destination).
+      </p>
+      <p>
+        <span class="function">Information
+          (
+          <img class="icon" src="media/apps/lay/icons/info.png" alt="icon">,
+          <kbd>Alt</kbd>+<kbd>I</kbd>
+          ):
+        </span>
+        This function displays a dialog window with a short informational text about
+        the application (to open a link directly in the default browser
+        the left button can be used,
+        while the right button brings up a context menu with the possibility of
+        copying the link to the clipboard):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/lay/scsh25.png">
+          <img src="media/apps/lay/scsh25.png" alt="Info dialog">
+        </a>
+      </div>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fapplay.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fapplay.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fapplay.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fapplay.html&amp;title=PalenqueLayout%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fapplay.html&amp;title=PalenqueLayout%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fapplay.html&amp;title=PalenqueLayout%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=PalenqueLayout%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fapplay.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>
