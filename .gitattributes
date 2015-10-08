@@ -1,5 +1,6 @@
 *  text=auto
 
+*.bat  text eol=crlf
 *.css  text
 *.html  text eol=lf
 *.js  text
