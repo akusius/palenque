@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalenqueAniGifMaker (Java Application) | The Palenque Code</title>
+    <meta name="description" content="Information about how to run and use the Palenque animated GIF maker program.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/apps.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/appagm.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/appagm.html">
+    <meta property="og:title" content="PalenqueAniGifMaker (Java Application) | The Palenque Code">
+    <meta property="og:description" content="Information about how to run and use the Palenque animated GIF maker program.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/appagm.html">
+    <meta name="twitter:title" content="PalenqueAniGifMaker (Java Application) | The Palenque Code">
+    <meta name="twitter:description" content="Information about how to run and use the Palenque animated GIF maker program.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>PalenqueAniGifMaker<br><small>(Java Application)</small></h2>
+    </div>
+    <div id="navigation">
+      <a href="appanim.html" accesskey="p" class="prev" title="PalenqueAnimation (Java Application)">&larr;</a>
+      <a href="apps.html" accesskey="u" class="up" title="Application softwares">&uarr;</a>
+      <a href="appendxa.html" accesskey="n" class="next" title="Appendix: State and Transformation Reference">&rarr;</a>
+    </div>
+    <div id="content">
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh01.png">
+          <img src="media/apps/agm/scsh01.png" alt="Initial state">
+        </a>
+      </div>
+      <h3 id="geninfo"><a class="anchor" href="#geninfo"></a>General information</h3>
+      <div class="properties">
+        <div class="property">
+          <span class="name">Name</span>
+          <span class="value">PalenqueAniGifMaker</span>
+        </div>
+        <div class="property">
+          <span class="name">Description</span>
+          <span class="value">
+            A Java (Swing) application to create animated GIFs for demonstrating
+            the solution process.
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Requirement</span>
+          <span class="value">
+            <a class="external" href="https://java.com">Java Runtime Environment (JRE) 7+</a>
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Links</span>
+          <span class="value">
+            <a class="external" href="https://github.com/akusius/palenque-anigifmaker/releases/latest">Latest release</a>
+            <a class="external" href="https://github.com/akusius/palenque-anigifmaker">GitHub repository</a>
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Installation</span>
+          <span class="value">
+            There is no need for installation, you should just download the
+            JAR file (<code>PalenqueAniGifMaker.jar</code>)
+            from the <a class="external" href="https://github.com/akusius/palenque-anigifmaker/releases/latest">latest release</a> page.
+          </span>
+        </div>
+        <div class="property">
+          <span class="name">Running</span>
+          <span class="value">
+            Double-click on the downloaded <code>PalenqueAniGifMaker.jar</code> file,
+            or (should it not start) please enter the following command:
+          </span>
+          <code class="block">
+            java -jar PalenqueAniGifMaker.jar
+          </code>
+        </div>
+        <div class="property">
+          <span class="name">Note</span>
+          <span class="value">
+            This program was created mainly for internal use
+            (to generate the animated GIF files of this document),
+            and might be (even) less polished or user-friendly
+            than the other applications.
+          </span>
+        </div>
+      </div>
+      <h3 id="features"><a class="anchor" href="#features"></a>Features overview</h3>
+      <p>
+        With this software an animated GIF file can be generated to demonstrate
+        a specific part of the transformational process, based on the
+        parameters set on the upper panel (see below in detail).
+        The parameters can be exported to a JSON file, and the application is also
+        able to embed them directly inside the GIF file (encoded as a comment) for later
+        retrieving. Before generating, the animation can be previewed, and also
+        screenshots can be taken from each frame.
+      </p>
+      <p>
+        For creating the GIF file, a simplified and slightly extended version of an (integrated)
+        <a class="external" href="http://www.java2s.com/Code/Java/2D-Graphics-GUI/AnimatedGifEncoder.htm">third party encoder</a>
+        written by Kevin Weiner (FM Software) is used.
+        The main modification was that the color quantization procedure had
+        been removed, and a global color table with grayscale values is used
+        (instead of local color tables for each frame), which change made the
+        encoding process (much) faster, the quality of the GIF file better
+        and its size a bit smaller (of course, the quantization
+        procedure is a must for colorful GIF animations, but here it was
+        fortunately not necessary).
+      </p>
+      <p>
+        Please note that the GIF file created by this program is not optimized,
+        i.e. it contains each frame in its entirety, which might lead to a very
+        large file at the end. It may be advisable to postprocess the file
+        by a specialized GIF optimizer (like e.g. the free, open source and
+        very effective
+        <a class="external" href="http://www.lcdf.org/gifsicle/">Gifsicle</a>),
+        which can exploit the similarities
+        between the consecutive frames and store only the differences,
+        resulting in an (often dramatic) reduction of the file size, without
+        any visible quality loss.
+      </p>
+      <h3 id="functions"><a class="anchor" href="#functions"></a>Function descriptions</h3>
+      <p>
+        <span class="function">Parameters:</span>
+        In the upper panel the parameters of the generation can be set:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh02.png">
+          <img src="media/apps/agm/scsh02.png" alt="Parameters">
+        </a>
+      </div>
+      <p>
+        The parameters and their roles in the generating process:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Width</td>
+            <td>Width of the generated GIF</td>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td>Height of the generated GIF</td>
+          </tr>
+          <tr>
+            <td>First step<span style="vertical-align: 40%; font-size: .8em;">*</span></td>
+            <td>Start point of the animation</td>
+          </tr>
+          <tr>
+            <td>Last step<span style="vertical-align: 40%; font-size: .8em;">*</span></td>
+            <td>End point of the animation</td>
+          </tr>
+          <tr>
+            <td>Hold in</td>
+            <td>Time for holding the first frame</td>
+          </tr>
+          <tr>
+            <td>Hold out</td>
+            <td>Time for holding the last frame</td>
+          </tr>
+          <tr>
+            <td>Fade in</td>
+            <td>Length of the fading effect at the start</td>
+          </tr>
+          <tr>
+            <td>Fade out</td>
+            <td>Length of the fading effect at the end</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>Speed of the animation</td>
+          </tr>
+          <tr>
+            <td>FPS</td>
+            <td>Frame per seconds</td>
+          </tr>
+          <tr>
+            <td>Translate X</td>
+            <td>Offset of the grid center in horizontal direction</td>
+          </tr>
+          <tr>
+            <td>Translate Y</td>
+            <td>Offset of the grid center in vertical direction</td>
+          </tr>
+          <tr>
+            <td>Phi</td>
+            <td>Rotation around X axis</td>
+          </tr>
+          <tr>
+            <td>Theta</td>
+            <td>Rotation around Y axis</td>
+          </tr>
+          <tr>
+            <td>Zooming</td>
+            <td>The zoom level of the scene</td>
+          </tr>
+          <tr>
+            <td>Auto</td>
+            <td>If on, the camera moves following a predefined path</td>
+          </tr>
+          <tr>
+            <td>Grid</td>
+            <td>Turns grid on/off</td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td>An arbitrary description text for the animation</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">
+              <span style="vertical-align: 40%; font-size: .8em;">*</span>
+              <span style="font-size: .8em;">This value is an internal one and
+                different from the step numbers used in this document.
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <p>
+        With the help of the buttons in the panel
+        the parameters can be exported or imported (in JSON format),
+        and they can also be reset to their default values.
+      </p>
+      <p>
+        <span class="function">Info:</span>
+        Information about the number of the frames and the length of
+        the animation in seconds
+        (and also the possible error messages appear here):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh03.png">
+          <img src="media/apps/agm/scsh03.png" alt="Info">
+        </a>
+      </div>
+      <p>
+        <span class="function">First and last (complete) frame:</span>
+        It shows the first and last frame in the animation
+        (together with the frame number in the upper right corner),
+        which are not held or faded:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh04.png">
+          <img src="media/apps/agm/scsh04.png" alt="First and last frame">
+        </a>
+      </div>
+      <p>
+        <span class="function">Destination file:</span>
+        The path of the destination file can be entered here
+        (the button with the ellipsis can be used to select a file from list).
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh05.png">
+          <img src="media/apps/agm/scsh05.png" alt="Destination file">
+        </a>
+      </div>
+      <p>
+        Also the parameters for the GIF file can be changed here:
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Parameter</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>Quality</td>
+            <td>Not used currently and disabled</td>
+          </tr>
+          <tr>
+            <td>Repeat</td>
+            <td>If checked, the GIF file will be looped forever</td>
+          </tr>
+          <tr>
+            <td>Embed parameters</td>
+            <td>Whether the parameters should be embedded in the GIF file (as a comment)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span class="function">Export
+          (
+          <kbd>Alt</kbd>+<kbd>E</kbd>
+          ):
+        </span>
+        The parameters can be exported (in JSON format) to a file or to the clipboard.
+      </p>
+      <p>
+        <span class="function">Import
+          (
+          <kbd>Alt</kbd>+<kbd>I</kbd>
+          ):
+        </span>
+        The parameters can be imported (in JSON format) from a file or from the clipboard.
+      </p>
+      <p>
+        <span class="function">Open GIF
+          (
+          <kbd>Alt</kbd>+<kbd>O</kbd>
+          ):
+        </span>
+        With this function a GIF file can be opened, i.e. the parameters previously embedded in it
+        can be retrieved.
+        If there are multiple embedded parameter sets in the GIF file
+        (e.g. if the GIF is a combination of other GIFs),
+        then the file to open can be selected:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh06.png">
+          <img src="media/apps/agm/scsh06.png" alt="Multiple GIFs">
+        </a>
+      </div>
+      <p>
+        If the selected file does not contain any embedded parameters, then
+        an informational message appears:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh07.png">
+          <img src="media/apps/agm/scsh07.png" alt="No embedded parameters">
+        </a>
+      </div>
+      <p>
+        The parameters are embedded as a
+        <a class="external" href="http://www.matthewflickinger.com/lab/whatsinagif/bits_and_bytes.asp#comment_extension_block">standard GIF-comment</a>
+        in a Base64 encoded binary
+        format prefixed with the string "<code>PQAGM:</code>".
+        The comment can be read and (if desired) edited or removed
+        in any general image viewer program.
+      </p>
+      <p>
+        <span class="function">State restore:</span>
+        If enabled, the program saves at close the current state to a
+        file called <code>state.pqg</code> and reloads it at the next startup.
+      </p>
+      <p>
+        <span class="function">Preview
+          (
+          <kbd>Alt</kbd>+<kbd>P</kbd>
+          ):
+        </span>
+        After invoking this function the preview window appears:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh08.png">
+          <img src="media/apps/agm/scsh08.png" alt="Preview dialog">
+        </a>
+      </div>
+      <p>
+        The image in the window has the same size, as the final GIF animation,
+        and also the FPS and the speed are simulated.
+        The playback can be started or stopped with the play button, and any frame
+        can be selected with the spinner or the slider.
+        The disk button saves the current image to a file,
+        and with the checkbox at the right the looping for the playback can
+        be enabled or disabled.
+        At the bottom part the parameters of the current frame are
+        observable, the Fade and Hold (readonly) checkboxes show,
+        whether the current frame is faded and/or held.
+      </p>
+      <p>
+        <span class="function">Generate
+          (
+          <kbd>Alt</kbd>+<kbd>G</kbd>
+          ):
+        </span>
+        Generates the GIF and writes the data to the destination file.
+        During the process a dialog window is shown with the current progress,
+        and it also provides the possibility of canceling the generation:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/apps/agm/scsh09.png">
+          <img src="media/apps/agm/scsh09.png" alt="Generate dialog">
+        </a>
+      </div>
+      <p>
+        <span class="function">Close:</span>
+        Closes the program, and potentially saves the current state
+        (if state restore is enabled).
+      </p>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappagm.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappagm.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappagm.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappagm.html&amp;title=PalenqueAniGifMaker%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappagm.html&amp;title=PalenqueAniGifMaker%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappagm.html&amp;title=PalenqueAniGifMaker%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=PalenqueAniGifMaker%20%28Java%20Application%29%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fappagm.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>

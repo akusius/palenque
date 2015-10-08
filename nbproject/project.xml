@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+  <type>org.netbeans.modules.web.clientproject</type>
+  <configuration>
+    <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
+      <name>PalenqueHtml</name>
+    </data>
+    <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+      <word>Akusius</word>
+      <word>Bujdosó</word>
+      <word>Centauri</word>
+      <word>Cotterell</word>
+      <word>Gifsicle</word>
+      <word>PalenqueAniGifMaker</word>
+      <word>PalenqueAnimation</word>
+      <word>PalenqueLayout</word>
+      <word>screenshot</word>
+      <word>Tiszaújváros</word>
+      <word>TODO</word>
+      <word>tooltip</word>
+      <word>Ádám</word>
+      <word>Ákos</word>
+    </spellchecker-wordlist>
+  </configuration>
+</project>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 8: Moving the Items | The Palenque Code</title>
+    <meta name="description" content="Solving the code in 12 steps: in step 8 we are a bit lost at first, but after some examination we find the new method required to continue the solution process.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/step08.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/step08.html">
+    <meta property="og:title" content="Step 8: Moving the Items | The Palenque Code">
+    <meta property="og:description" content="Solving the code in 12 steps: in step 8 we are a bit lost at first, but after some examination we find the new method required to continue the solution process.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/step08.html">
+    <meta name="twitter:title" content="Step 8: Moving the Items | The Palenque Code">
+    <meta name="twitter:description" content="Solving the code in 12 steps: in step 8 we are a bit lost at first, but after some examination we find the new method required to continue the solution process.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>Step 8: Moving the Items</h2>
+    </div>
+    <div id="navigation">
+      <a href="step07.html" accesskey="p" class="prev" title="Step 7: The Control Phase">&larr;</a>
+      <a href="steps.html" accesskey="u" class="up" title="Solving the Code in 12 Steps">&uarr;</a>
+      <a href="step09.html" accesskey="n" class="next" title="Step 9: The First Fold">&rarr;</a>
+    </div>
+    <div id="content">
+      <p>
+        After performing the rotations and checking the layout at the control
+        phase, we may be a bit lost about what to do next, what the next step
+        should be in solving the code. The pattern seems to be finished now,
+        and no rotation or reflection could make it even more complete.
+        Nonetheless, we feel, that the process must go further somehow,
+        that there must still be operations left to perform. But how to find them?
+      </p>
+      <p>
+        Before possibly getting desperate, let's take a fresh look at the control phase
+        pattern, and try to understand, what we are observing:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08i01.png">
+          <img class="framed" src="media/s08i01.png" alt="Starting state">
+        </a>
+      </div>
+      <p>
+        The picture is clearly divided into an inner and an outer part
+        (as we have already recognized it in <a href="step07.html" title="Step 7: The Control Phase">the previous step</a>).
+        Considering <a href="step03.html" title="Step 3: The Interstellar Travel">the message we are searching for</a>
+        (the location of the other solar system),
+        it also seems to be obvious, that the outer part plays the more important role,
+        since both the Sun and the star symbols are placed there.
+        But then what purpose does the inner part serve for, what could be its function
+        in the solution?
+      </p>
+      <p>
+        Let's think... We must perform some operations on the items of the outer edge,
+        that seems evident...
+        Isn't it possible, that the inner elements are there
+        to instruct us, what operations to execute? That they could be the
+        guides helping us to find the next necessary move? That maybe we should
+        link the outer and inner shapes to each other, and then carry out
+        the same actions on each outer item, as its corresponding
+        inner counterpart indicates us to do?
+      </p>
+      <p>
+        Let's verify, whether this idea would be feasible! At this stage we could attach (based on their positions and appearance) the inner and the outer
+        items to each other in the following way (only one link per type is shown):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08i02.png">
+          <img class="framed" src="media/s08i02.png" alt="Attached elements highlighted">
+        </a>
+      </div>
+      <p>
+        All the attachments visualized by different colors:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08i03.png">
+          <img class="framed" src="media/s08i03.png" alt="Attachments visualised by colors">
+        </a>
+      </div>
+      <p>
+        The inner items may suggest us to "push them together",
+        i.e. to move them toward the center.
+        And this would mean, of course,
+        that we should move each outer shape as well,
+        in the same direction and by the same distance
+        as the inner shape attached to it:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08i04.png">
+          <img class="framed" src="media/s08i04.png" alt="Arrows showing the movements">
+        </a>
+      </div>
+      <p>
+        Let's try, and perform the operation in two phases. First we move the corner elements:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08a01.gif">
+          <img class="framed anim" src="media/s08a01.gif" alt="Moving the corner elements">
+        </a>
+      </div>
+      <p class="note">
+        Note: we do not push them together completely, as there must be enough room
+        left for the middle items (coming on the way).
+      </p>
+      <p>
+        Then the middle elements:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08a02.gif">
+          <img class="framed anim" src="media/s08a02.gif" alt="Moving the middle elements">
+        </a>
+      </div>
+      <p>
+        For checking purposes the two motions together with grid turned on:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08a03.gif">
+          <img class="framed anim" src="media/s08a03.gif" alt="Two motions together with grid">
+        </a>
+      </div>
+      <p>
+        And the end state after having executed the operation:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s08i05.png">
+          <img class="framed" src="media/s08i05.png" alt="End state after moving">
+        </a>
+      </div>
+      <p>
+        It seems that the idea is working so far!
+        With its help we were indeed able to take the solution one step further again.
+        Let's also recognize, how elegantly the designers of the code
+        bring the Sun and star symbols into an offset position to each other!
+        Of course it would have been possible to have this configuration
+        right after the rotations, but then we could not have had the opportunity
+        to check the layout in the control phase.
+        So at first an arrangement with all the elements placed on the same line
+        was created, in order to make the test possible,
+        and then in this step the items are finally moved into their positions.
+        A beautiful piece of work (once again)!
+      </p>
+      <p>
+        In the next step we will continue applying the idea we have just found,
+        that is, we will perform the very same actions on the outer elements,
+        which the inner elements attached to them indicate us to do.
+      </p>
+      <div class="next-page">
+        <a href="step09.html" title="Step 9: The First Fold">Continue to the next step</a>
+      </div>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep08.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep08.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep08.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep08.html&amp;title=Step%208%3A%20Moving%20the%20Items%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep08.html&amp;title=Step%208%3A%20Moving%20the%20Items%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep08.html&amp;title=Step%208%3A%20Moving%20the%20Items%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=Step%208%3A%20Moving%20the%20Items%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep08.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>

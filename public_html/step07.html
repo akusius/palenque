@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 7: The Control Phase | The Palenque Code</title>
+    <meta name="description" content="Solving the code in 12 steps: in step 7 we analyze thoroughly the pattern that we got as a result after performing the three rotations and the reflection.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/step07.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/step07.html">
+    <meta property="og:title" content="Step 7: The Control Phase | The Palenque Code">
+    <meta property="og:description" content="Solving the code in 12 steps: in step 7 we analyze thoroughly the pattern that we got as a result after performing the three rotations and the reflection.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/step07.html">
+    <meta name="twitter:title" content="Step 7: The Control Phase | The Palenque Code">
+    <meta name="twitter:description" content="Solving the code in 12 steps: in step 7 we analyze thoroughly the pattern that we got as a result after performing the three rotations and the reflection.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>Step 7: The Control Phase</h2>
+    </div>
+    <div id="navigation">
+      <a href="step06.html" accesskey="p" class="prev" title="Step 6: The Reflection">&larr;</a>
+      <a href="steps.html" accesskey="u" class="up" title="Solving the Code in 12 Steps">&uarr;</a>
+      <a href="step08.html" accesskey="n" class="next" title="Step 8: Moving the Items">&rarr;</a>
+    </div>
+    <div id="content">
+      <p>
+        Let's inspect and analyze carefully the pattern we got as a result
+        after executing the rotations and the reflection:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s07i01.png">
+          <img class="framed" src="media/s07i01.png" alt="Control phase">
+        </a>
+      </div>
+      <p>
+        The pattern is clearly divided into an inner and an outer part,
+        furthermore the elements outside are all placed on the edges of a square:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s07i02.png">
+          <img class="framed" src="media/s07i02.png" alt="Control phase with highlights">
+        </a>
+      </div>
+      <p>
+        The important question is, of course, how likely it is to have such
+        an organized arrangement after performing the preceding operations.
+        Obviously, the duplications and rotations themselves cause a high amount of
+        symmetry (similarly to a kaleidoscope), as each item is octupled now.
+        But is this effect (which, by the way, will not be exploited in the solution,
+        as we will use only one quarter of
+        <a href="step11.html" title="Step 11: The Final Figure">the final figure</a>)
+        itself enough to explain the type of regularity we are observing here?
+        Or, more precisely: what is the probability to get
+        a similarly well-arranged pattern as a result
+        after performing the rotational operations on an arbitrarily selected initial layout?
+      </p>
+      <p>
+        There are two approaches to answer these questions: practically (i.e. trial and error)
+        and theoretically.
+        Let's start with the first method, and carry out the operations on
+        other layouts as well.
+      </p>
+      <p>
+        As I already mentioned in <a href="step04.html#a38c" title="Step 4: The Item Layout">step 4</a>,
+        a separate Java application (<a href="applay.html" title="PalenqueLayout (Java Application)">PalenqueLayout</a>)
+        was created for this very purpose. With the help of it you can build different
+        layouts, and then execute the rotations on them to check
+        the final state (i.e. this control phase).
+        To demonstrate that our initial layout is indeed a (very) special one,
+        I'd like to present in the following some other layouts constructed with this program
+        (more precisely they were composed by randomizing the default layout multiple times),
+        that have the exact same items (10 triplets, 1 Sun and 1 star symbol),
+        but placed at different positions. On the left side the initial state is shown,
+        while on the right the end state after the rotations and reflection.
+      </p>
+      <p style="text-align: left;">
+        Layout #1 (<small>PQLT9397T9898T9610T0896T7714T0521T2123T9484S9882T1285T1496R2192</small>):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s07i03.png">
+          <img class="framed" src="media/s07i03.png" alt="Other layout #1">
+        </a>
+      </div>
+      <p style="text-align: left;">
+        Layout #2 (<small>PQLT9807T7914T8908T0324R1904T2421T7686T8298S8788T9284T0883T2082</small>):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s07i04.png">
+          <img class="framed" src="media/s07i04.png" alt="Other layout #2">
+        </a>
+      </div>
+      <p style="text-align: left;">
+        Layout #3 (<small>PQLT9889T0088R8306S8411T1207T1503T2209T8198T8699T8892T1183T1688</small>):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s07i05.png">
+          <img class="framed" src="media/s07i05.png" alt="Other layout #3">
+        </a>
+      </div>
+      <p class="note">
+        Note: These layouts were selected purely by chance, and the vast majority
+        of the layouts are just very similar (in the sense of all being chaotic).
+        With the <a href="applay.html" title="PalenqueLayout (Java Application)">PalenqueLayout</a> utility
+        you can rebuild and test these arrangements by importing the codes in parentheses,
+        or you can also build new ones from scratch.
+      </p>
+      <p>
+        As we can see, the same "kaleidoscopical" symmetry, caused by the reflections
+        themselves, can be noticed also here,
+        but we don't recognize at all that organized and arranged appearance,
+        that was observable at our initial layout above: there are no inner and outer
+        parts separated, the items are not joined to larger shapes, there is no
+        square to link the elements together, and so on.
+      </p>
+      <p id="a91f">
+        So, it seems clear that our layout is indeed special to some extent:
+        the question is, of course, exactly <em>how</em> special it is,
+        how many other layouts could exist in theory with a similarly well-arranged
+        control phase state. To be honest, giving a precise answer
+        exceeds (by far) my mathematical abilities, and so I rather would
+        <a href="ftasks.html#theory" title="Theoretical framework | Further Tasks">let others</a>, equipped with more advanced apparatus,
+        compute this probability exactly, based on some geometrical framework (yet to be created?)
+        for this and analogous coding systems.
+      </p>
+      <p>
+        Thus for now, until the theoretical background is clarified,
+        we must settle for the practical approach,
+        try different layouts by moving items around,
+        and see whether we can arrive at any state as orderly as the one above.
+        I myself have not been able to find any other layouts (aside from the variations of this of course) with even approximate
+        (let alone same or exceeding) level of regularity,
+        but encourage anybody interested in the subject to try this him/herself by
+        using the <a href="applay.html" title="PalenqueLayout (Java Application)">PalenqueLayout</a> utility (or by any
+        other means). I personally am quite sure that the item arrangement on the lid is
+        very (very) special if not unique, and to me this singularity is also a clear indication that
+        the triplets are certainly not there for decoration purposes,
+        but instead they were placed at their positions as constituent parts of a coding method,
+        moreover by some beings with a very (very) high level of intelligence,
+        since, presumably, we, present day humans ourselves
+        <a href="step12.html#a273" title="Step 12: Conclusions">would not manage</a>
+        to construct such a sophisticated encoding.
+        But, of course, these are just intuitions and more (mainly theoretical)
+        work <a href="ftasks.html#theory" title="Theoretical framework | Further Tasks">is needed</a> to obtain an absolute (or at least reasonable) assurance.
+      </p>
+      <p>
+        It also seems to be clear, that this control phase was included in the
+        process by the designers in order to enable us, the decoders
+        to correct the inaccuracies introduced by the representation.
+        For this purpose the control phase is so sensitive
+        (which is of course advantageous in this situation),
+        that already moving one single item by only 1 or 2 units can easily break it.
+        For example, in <a href="step04.html#af71" title="Step 4: The Item Layout">step 4</a> we have seen, that the Sun item
+        (#11) did not cover completely the symbol under it, and so we could be
+        tempted to move it one square to the left, from
+        (&minus;11,&nbsp;&minus;20) to (&minus;12,&nbsp;&minus;20).
+        But if we did so, the symmetry on the edge would be broken immediately, as the symbol
+        would be closer now to the corners than to the middle elements:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s07i06.png">
+          <img class="framed" src="media/s07i06.png" alt="Wrong position for the Sun">
+        </a>
+      </div>
+      <p>
+        In this step we have thoroughly analyzed the control phase state,
+        and have ascertained (to the degree achievable without
+        a theoretically established framework for such types of encodings) that:
+        1. the layout presented in <a href="step04.html#afab" title="Step 4: The Item Layout">step 4</a>
+        indeed seems be the closest one to the design originally conceived;
+        2. this reconstructed layout is so special (if not unique)
+        with regard to the resulting state after performing
+        the rotational operations, that it should make us
+        at least suspicious about the explanation of the triplets
+        being mere decorations, and should inspire us to go further in
+        exploring the peculiarities of this pattern.
+      </p>
+      <p>
+        So, step after step it becomes more and more probable, that the code
+        does really exist, and that we are on the right track to "crack" it.
+        But we are only in the middle of the process, and certainly
+        several new puzzles are there waiting for us.
+        Let's see, whether we will be able to solve them too!
+      </p>
+      <div class="next-page">
+        <a href="step08.html" title="Step 8: Moving the Items">Continue to the next step</a>
+      </div>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep07.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep07.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep07.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep07.html&amp;title=Step%207%3A%20The%20Control%20Phase%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep07.html&amp;title=Step%207%3A%20The%20Control%20Phase%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep07.html&amp;title=Step%207%3A%20The%20Control%20Phase%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=Step%207%3A%20The%20Control%20Phase%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep07.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Better Web | Other Theories | The Palenque Code</title>
+    <meta name="description" content="Suggestions for a revised web architecture: decentralized common document storage, standardized object-oriented data types, advanced interactive client framework, etc.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/theories.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/thweb.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/thweb.html">
+    <meta property="og:title" content="A Better Web | Other Theories | The Palenque Code">
+    <meta property="og:description" content="Suggestions for a revised web architecture: decentralized common document storage, standardized object-oriented data types, advanced interactive client framework, etc.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/thweb.html">
+    <meta name="twitter:title" content="A Better Web | Other Theories | The Palenque Code">
+    <meta name="twitter:description" content="Suggestions for a revised web architecture: decentralized common document storage, standardized object-oriented data types, advanced interactive client framework, etc.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2><a href="theories.html" title="Other Theories">Other Theories</a></h2>
+    </div>
+    <div id="navigation">
+      <a href="thgenrel.html" accesskey="p" class="prev" title="General Relativity | Other Theories">&larr;</a>
+      <a href="theories.html" accesskey="u" class="up" title="Other Theories">&uarr;</a>
+      <a href="./" accesskey="n" class="next" title="The Palenque Code">&rarr;</a>
+    </div>
+    <div id="content">
+      <h3>A Better Web</h3>
+      <p>
+        The World Wide Web is in its current form (unfortunately) much more suitable for
+        using it as a marketing and promoting platform than for serious information
+        and knowledge sharing.
+        Various design issues and questionable development decisions in the past 20-25
+        years led to this situation, and, consequently, many changes in the initial concepts
+        and a rethought architecture would be necessary for creating a new, better
+        version of the Web.
+      </p>
+      <p>
+        The first problem from the aspect of the knowledge sharing is the use of the
+        <a class="external" href="https://en.wikipedia.org/wiki/Domain_Name_System">domain name system</a>
+        for logical (not only physical) partitioning,
+        and the fact that it literally necessitates the fragmentation of the information.
+        Today, each domain is virtually a separate universe, where the data are stored completely
+        independently from each other, not only with regard to their physical storage,
+        but also to their formats, structures, classifications and access methods.
+        As a matter of fact, the Web of today is only working, because very large megadomains have been evolved
+        in the past two decades (facebook.com, google.com, youtube.com, twitter.com, etc.),
+        and these behave (especially Facebook), as if they were <em>the</em> Internet,
+        thus eliminating many of the initial design problems of the Web
+        (but naturally only so long as the user stays inside that domain).
+        If the original concepts had come true
+        (which apparently had not expected the emergence of such large domains),
+        then we would have billions
+        of small and smaller domains in the Web now, without any possibility to
+        synchronize the data (or even the data formats) between them.
+      </p>
+      <p>
+        A much better approach would be, if the architecture enforced from the start
+        the usage of a common worldwide physical storage solution, and
+        the domain system would only be used to sign the data stored on this platform,
+        or to provide a specialized view on these data.
+        Actually, we are getting each day closer technically to this solution, since today the domains themselves
+        are often only accessed for the main pages, and the factual data are stored
+        on CDNs or elsewhere in the cloud; but this architecture is not standardized,
+        and is operated by the private sector (i.e. the capitalists) instead of the Internet
+        community (moreover it is only feasible by effectively violating the DNS).
+        The Web standards should take care for the storage of the data (as this
+        is the really important part, not the presentation of it), and they should
+        standardize the way, how a worldwide, or at least international decentralized file and
+        document storage system should be constructed and operated.
+        The data centers around the world should be in the possession of the Internet
+        community, and a standardized system should be used, which would
+        be capable of storing data redundantly on this platform, synchronizing it
+        among the various centers, registering the new uploads and the access
+        of the data, and providing a basic API to list the data uploaded to this platform.
+        Of course, it should be scalable too, even from a small USB-stick to a many PB large
+        data center, and also should have the opportunity to get physically and/or logically
+        partitioned into smaller, self-operable sections.
+        This decentralized worldwide file storage architecture would form the basis of the new Web, and
+        each institution or data provider, who would like to be part of it,
+        must use this platform to store its data and to make accessible them
+        (of course, it can run its own data center physically and even logically
+        separated from the other parts of the Net, but the architecture used on
+        this center to store and access the data must follow the standards in order to
+        be part of the large network).
+      </p>
+      <p>
+        This standardized storage system would assure that the data shared on it remain
+        in the possession of the community (not of those operating the data centers),
+        and that it is stored sufficiently redundantly throughout the network,
+        providing the ability of the data access to anybody connected to the Web.
+        The system is also responsible for verifying the identification of the uploaders,
+        for digitally signing the metadata, for maintaining the live list of the
+        files uploaded to the network, for hashing and identifying the data,
+        and even a basic version control system could be integrated already at this
+        level (e.g. two parents for each file, and an API to search for the IDs of
+        earlier and later versions of a document).
+        The operator of the system is also responsible for managing the
+        identification subsystem for the users of the platform, i.e. for identifying
+        the users at the creation of their IDs, and for issuing, storing and revoking
+        the digital certificates used for the signatures.
+        The storage system should be optimized for many small data fragments
+        (at the size of some kBs), but it should of course give the possibility
+        to upload and download very large (multiple GBs long) files too,
+        with the ability to stream these files. It should also provide alternative
+        ways to reach a document based on its ID, e.g. to download it from a data center,
+        to share it between peers in an ad-hoc subnetwork, or to stream it in chunks from
+        different locations.
+        An essential feature of this storage platform would be that a data once
+        uploaded into it could not be changed: after the successful uploading
+        (and the verification of the user identity) it would get a hash
+        computed from its contents and a digital signature,
+        and must always be presented in the exact same data format at bit level.
+      </p>
+      <p>
+        The new Web would be based on small and completely immutable data fragments
+        (representing a unit of information),
+        and the platform outlined above would be used to store
+        these unchangeable small files efficiently, redundantly and securely.
+        At the next level, the data formats must be standardized, at least within
+        a profession or usage branch, but rather (especially for common data) globally.
+        The best for this purpose could be to use an object-oriented approach,
+        and to create a global object type description language (maybe based on UML?) and a system,
+        where these types are registered, normalized and maintained.
+        An important conception behind this solution would be (as it already
+        results from the OO approach), that we use compact and small data types, which are
+        responsible only for a well-defined single task, and the interconnections between them
+        and their contexts will determine the actual meaning of the fragments.
+        Each profession itself would be responsible for creating and maintaining the formats
+        necessary for its data storage and access needs, but, of course,
+        synchronization and normalization will also be required at an upper level to ensure
+        the consistency between the various formats.
+        Ideally, we would have a globally standardized and unified object type system at the end,
+        which would contain data formats for every imaginable tasks in each profession.
+      </p>
+      <p>
+        A major change from the current architecture would be that
+        the data itself could be accessed by the clients, and not only its already laid out
+        representation (as it is the case today with the HTML files).
+        Data, and not user interface definition would be transferred over the wire, and the presentation
+        of these data would be the task of the client side applications, based on
+        the user preferences and other factors.
+        The most severe problem with the Web of today
+        from the aspect of knowledge and information sharing is,
+        that it hides the data behind some subjective appearance determined by server side scripts:
+        when a user enters a URL, (s)he downloads virtually a digital publication
+        from the server in HTML format, which contains the various data in an already edited, mixed, paginated
+        and columned version, almost the same, as if (s)he downloaded e.g. a magazine in a PDF file.
+        Furthermore, this HTML can be changed or removed at any time
+        in the current architecture,
+        which encumbers its indexation and reference significantly,
+        and renders the information sharing process fragile and easily breakable
+        (see e.g. the mass of broken links on the Wikipedia).
+        This web architecture seems advantageous only for the marketing and
+        designer persons (the so-called "creatives"), who can force through it their own
+        (often literally infantile) way of information presentation
+        upon the whole Internet community.
+        In the new Web, the server would really serve the clients
+        (with data and document fragments), and the client could decide,
+        which is the best way (based on the preferences and other factors)
+        to actually display and present this type of data to the user.
+        Moreover, the indexing procedure would be much more effective,
+        because a file must be indexed only once (since it will not change after upload),
+        and this would also make possible that different indexing
+        services could be layered on each other (e.g. at the first level a basic service which only
+        registers the file types, sizes and metadata, at next level a more
+        specialized service, e.g. for books, and at the third or fourth level
+        an even more specific indexing, e.g. for the novels of Goethe).
+        Also the referencing would be significantly more stabile and permanent, since
+        each immutable data fragment owns a separate identification,
+        and can be referenced (theoretically forever) without the risk of
+        <a class="external" href="https://en.wikipedia.org/wiki/Link_rot">link rot</a>.
+        In addition, as a data is always the same at bit level,
+        it could also be referred to in parts (e.g. a sentence in a paragraph,
+        an interval in a video, a region in a picture, etc.).
+      </p>
+      <p>
+        At the next level, services would be defined,
+        which could be queried for data or requested to run procedures remotely.
+        They would also use the data formats defined at the previous level,
+        the only real difference from the storage platform would be
+        that these data would not have to be stored permanently, and
+        could be valid only within a session, or for a short period of time.
+        Of course, these services could also use the storage platform
+        in order to store a part of their data permanently,
+        e.g. an indexing service could put its current state of indices
+        monthly or even daily into the storage.
+        Additionally, these services should favor the reference of
+        other, already stored data, over the recreation of them anew.
+        A service would be accessed by its domain name,
+        and a standardized service registration and description
+        system would be used to define the capabilities and access methods of each service.
+        Should multiple services exist for a task,
+        then the preferences of a user could be used to choose among them,
+        but it should be preferred that for a single use case
+        only one service would be operated worldwide (physically redundantly of course),
+        with the ability to rate and modify its operation through user feedbacks.
+      </p>
+      <p>
+        At the last level the client application framework would have the
+        responsibility for querying, downloading and presenting the data to the user
+        (and for creating, editing and uploading them to the Web).
+        Contrary to the solution today, where each domain provides an
+        own application (through the browser or as a mobile app),
+        a component based approach could be much more advantageous,
+        where each component is responsible for the presentation of
+        one certain data type (e.g. a paragraph text, an image, a calendar,
+        a table, a product description, etc.).
+        The efforts (especially by Microsoft) in the 90s years to create
+        a component based application framework already showed that
+        the conception is basically right (Microsoft still uses it extensively
+        in its Office and other desktop applications), but evidently for
+        the Internet usage (where the data are much more dynamic, and there is
+        no time to wait for a component to initialize), a more optimized
+        framework should be constructed.
+        Furthermore, the development of psychological algorithms should be
+        massively urged, and such a client application framework
+        should be able to connect the components to each other
+        and dynamically lay out them completely on its own, without any
+        prior programming or compilation procedure.
+        This task is not so difficult, as it might appear at first look,
+        since the desktop applications of today (e.g. Office)
+        are primarily statically designed and built,
+        but in a dynamic arrangement system it is not necessary to have a perfect
+        layout immediately at the first try,
+        because the user can interactively give his/her feedbacks,
+        and the system can learn from it to refine its algorithms.
+        Moreover, in a dynamical presentation system only one or two
+        units of information needs to be displayed at a time,
+        and the feedbacks of the user (mouse operations, gestures or even
+        eye movements) can be followed to change the current information
+        on the display, without the necessity of managing a complex
+        user interface automatically.
+        The concept behind this framework would be that the entire
+        data processing and creation procedure should be much more focused,
+        only a single task should be performed at a time, and the
+        complexity of the procedure would come from the ability to change
+        quickly (and preferably fully automatically) from one focus to another.
+      </p>
+      <p>
+        Using the architecture outlined above, brand new methods and mediums of
+        the online information and knowledge sharing could be developed.
+        The Web of today is much too close to the presentation methods of the offline world:
+        e.g. the texts are columned and laid out, articles, chapters and even complete books are
+        used as formats for the information representation,
+        the Wikipedia follows the standards of the traditional lexica, and so on.
+        Actually, the only circumstance, which distinguishes the web pages from the offline media today,
+        is the time factor, but this is exactly an advantage of the offline world
+        (since the latter is much more tranquil and calm, while the Web
+        is often literally hysterical).
+        In fact, the web pages of today seem to combine the drawbacks of the two realms:
+        they are ephemeral and momentary on the one side,
+        while manipulative and centrally edited on the other.
+        Instead, the exact opposite combination would be the desirable:
+        the online contents should be valid for the (very) long term
+        and referable even after hundreds or thousands of years,
+        and at the same time they should be dynamically
+        filterable, sortable, rearrangeable, remixable,
+        reusable and restructurable.
+        The new architecture, based on immutable small data fragments
+        connected to each other, and dynamically arranged at the client side, could
+        help such new online information organization and presentation methods to emerge,
+        which would then have only a vague resemblance to the forms used today.
+        E.g., there would not exist Wikipedia as a platform in itself,
+        instead everybody would be encouraged to create small,
+        some paragraphs long texts in the lexicon data format (defined at the data type level),
+        to connect them to already existing other data fragments,
+        and to put them into the storage platform with the own signature.
+        Then, analyzing and indexing services would rate (automatically or with human intervention)
+        the data fragments according to their formats, contents, associated tags and connections,
+        and based on this analyzation new documents would be
+        created and stored with a reference list of the best fragments (in some logical order).
+        Afterwards, these lists could be downloaded (or queried directly) by the client
+        application, and finally the selected fragments would be shown in the suggested (or other preferred) order.
+        The same content could be represented in various lengths and
+        deepness, and the client framework could choose the most appropriate
+        one based on the user's preferences, age, professional level,
+        current spare time or environment (e.g. a quiet room or a train station).
+        There would be also no edit wars anymore, since everybody could
+        edit and store his/her own variant of a text, and it would not
+        be necessary to have a canonical version of an article,
+        because the final structure of the content would be determined by
+        the client application and only for a short session, not on the server
+        side and forever. Of course, an editorial team could favor a
+        particular data fragments arrangement, and sign this reference list version
+        with its own certificate, but it will not be the only possible mixture,
+        and also this one would be only a suggestion for the client application
+        to display potentially these fragments in this order.
+        The presentation of the fragments would be as interactive as possible:
+        the client framework would follow the feedbacks of the user continously
+        (even the unintentional ones), and would try to present the most
+        interesting fragments in a manner, which could draw and hold his/her attention,
+        thus making the information processing and learning procedure much more effective, than it is today.
+      </p>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fthweb.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fthweb.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fthweb.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fthweb.html&amp;title=A%20Better%20Web%20%7C%20Other%20Theories%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fthweb.html&amp;title=A%20Better%20Web%20%7C%20Other%20Theories%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fthweb.html&amp;title=A%20Better%20Web%20%7C%20Other%20Theories%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=A%20Better%20Web%20%7C%20Other%20Theories%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fthweb.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>

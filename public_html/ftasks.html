@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Further Tasks | The Palenque Code</title>
+    <meta name="description" content="What could and should be done in order to prove or disprove scientifically the hypothesis about the Palenque code and its solution.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/ftasks.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/ftasks.html">
+    <meta property="og:title" content="Further Tasks | The Palenque Code">
+    <meta property="og:description" content="What could and should be done in order to prove or disprove scientifically the hypothesis about the Palenque code and its solution.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/ftasks.html">
+    <meta name="twitter:title" content="Further Tasks | The Palenque Code">
+    <meta name="twitter:description" content="What could and should be done in order to prove or disprove scientifically the hypothesis about the Palenque code and its solution.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>Further Tasks</h2>
+    </div>
+    <div id="navigation">
+      <a href="issues.html" accesskey="p" class="prev" title="Issues and Uncertainties">&larr;</a>
+      <a href="./" accesskey="u" class="up" title="The Palenque Code">&uarr;</a>
+      <a href="story.html" accesskey="n" class="next" title="The Story Behind the Solution">&rarr;</a>
+    </div>
+    <div id="content">
+      <h3 id="review"><a class="anchor" href="#review"></a>Review of the solution</h3>
+      <p>
+        The first and foremost task would of course be to review the solution
+        carefully and (preferably) with scientific accuracy.
+        Since the "established" science (as we all happen to know)
+        does not really like to deal with such topics
+        (which, to be honest, after the "theories" of Däniken and
+        consorts is a bit understandable), at first perhaps we, the Internet community
+        should inspect and examine the solution,
+        and then (if it has proven to be true or at least justifiable)
+        popularize it in a way that at some point the academic world
+        would finally be compelled to take it as a hypothesis seriously
+        and analyze it thoroughly.
+      </p>
+      <h3 id="theory"><a class="anchor" href="#theory"></a>Theoretical framework</h3>
+      <p>
+        In order to review and (potentially) confirm the hypothesis, apparently
+        a new theoretical framework needs to be created first, since the encoding
+        method seems not to be covered by the existing theories.
+        The new framework should enable us to compute exactly what probability
+        it has to come to a state like that in the
+        <a href="step07.html" title="Step 7: The Control Phase">control phase</a> from an arbitrary initial layout,
+        and it would be great, if we also had an algorithm to construct similar
+        encoding procedures.
+        Obviously, given a coordinate range and an item set,
+        calculating the total number of possible layouts is a trivial task,
+        but determining which layouts should be considered to be well-arranged
+        is not self-evident at all (at least to me it was not),
+        and certainly requires a more advanced mathematical approach.
+      </p>
+      <p>
+        To illustrate the requirements and the difficulties
+        with regard to a theoretical framework,
+        let's try to compute the probability for a very basic scenario.
+        Let's have a coordinate range from (&minus;25,&nbsp;&minus;25) to (25,&nbsp;25)
+        and two 3&times;3-sized symbols: a Sun placed at (&minus;11,&nbsp;&minus;20) and
+        a star symbol placed anywhere else arbitrarily (but not colliding with the Sun).
+        The question is: how probable is it to have such a position for the star symbol
+        that after performing the rotational and reflectional operations
+        the two symbols and their reflections all will be placed on the edges of a
+        square?
+      </p>
+      <p>
+        The vertices of the square that should contain the elements on its edges are
+        (determined by the location of the Sun symbol):
+        (&minus;20,&nbsp;&minus;20), (&minus;20,&nbsp;20), (20,&nbsp;20) and (20,&nbsp;&minus;20).
+        Obviously, the star symbol must already be placed on the square
+        before the rotations, as these operations do not move the elements
+        out of the square they were positioned on initially (which square is
+        defined by the larger one of the absolute coordinate values).
+        There are 160 different possibilities to locate a star symbol (or
+        any other item) on the edges of a 41&times;41 square (39 on each side + 4 corners),
+        but we must eliminate those cases, where the two symbols (or any of
+        their copies) collide with each other.
+        By a single Sun there are 7 invalid positions (e.g. from
+        (&minus;14,&nbsp;&minus;20) to (&minus;8,&nbsp;&minus;20) by the original one),
+        and so 8&nbsp;&times;&nbsp;7&nbsp;=&nbsp;56 altogether (since the Sun symbols are far from the corners,
+        there are no overlaps we should consider).
+        Subtracting this from 160 gives 104 possible positions for the star
+        symbol, and if we accept only those initial arrangements, where the two symbols
+        are located on a different edge, i.e. the star symbol cannot be placed on the edge
+        from (&minus;20,&nbsp;&minus;20) to (20,&nbsp;&minus;20),
+        then the number of the valid positions decreases further by 27 to 77.
+      </p>
+      <p>
+        Computing the total number of the possible placements for the star
+        symbol is much easier. It can be placed (almost) anywhere inside
+        the 49&times;49-sized square from (&minus;24,&nbsp;&minus;24) to
+        (24,&nbsp;24), which gives 49&nbsp;&times;&nbsp;49&nbsp;=&nbsp;2401 different locations
+        (naturally, we cannot place the symbol directly on the edges because of its size).
+        But we must eliminate those cases, where it would be too close to the
+        Sun symbol, which has a 7&times;7-sized "fence" around it,
+        resulting in 2401&nbsp;&minus;&nbsp;7&nbsp;&times;&nbsp;7&nbsp;=&nbsp;2352 possibilities altogether.
+        So, we can finally calculate the probability for this (very simple) scenario:
+        104&nbsp;/&nbsp;2352&nbsp;&asymp;&nbsp;4.42%,
+        and if the star symbol cannot be located initially on the same line as
+        the Sun, then this probability decreases further to:
+        77&nbsp;/&nbsp;2352&nbsp;&asymp;&nbsp;3.27%.
+      </p>
+      <p>
+        Of course, for a full-fledged probability computation
+        the triplets must also be taken into account
+        (thus reducing further the calculated probability significantly),
+        the Sun's position should be modifiable,
+        and many many other enhancements are needed,
+        which would require a more advanced mathematical apparatus
+        that I personally can come up with. The best would be to have
+        a definite probability value at the end of the calculations,
+        which could be a clear indication about the randomness or intentionality
+        of the original design, concerning the apparently well-arranged state of the
+        <a href="step07.html" title="Step 7: The Control Phase">control phase</a>.
+      </p>
+      <p>
+        We should recognize that this analysis and the framework could be completely separated
+        from the (much more fantastical) hypothesis about <a href="step03.html" title="Step 3: The Interstellar Travel">the interstellar travel</a>
+        and the interpretation of the <a href="step11.html" title="Step 11: The Final Figure">final figure</a>
+        (as it was already mentioned <a href="step12.html#a6fe" title="Step 12: Conclusions">here</a>).
+        This part of the solution is purely mathematical,
+        and a well-established theory for it could have the potential
+        of (dis)proving its correctness with an almost absolute certainty.
+        Because of the problem's complexity it is surely not
+        an easy task to construct such a theoretical framework, but it is definitely feasible,
+        and its existence could benefit (at least in my opinion) the science
+        or even the whole mankind.
+      </p>
+      <p>
+        It should also be noticed that they are two completely different topics,
+        whether the solution (or its geometric part) itself is provable and comprehensible
+        (which is a code breaking issue), and whether the ancient Mayan
+        (or any other) culture could indeed have the knowledge required
+        for constructing a coding system of this kind (which is a historical question).
+        Unfortunately, until we have an almost hundred percent certain proof in our hand
+        that some ancient culture did really possess the necessary intelligence,
+        the historical considerations will always be strong enough to discredit
+        the efforts to crack such supposed coding systems.
+        Therefore, the best strategy could be to separate these two approaches entirely,
+        and to examine the solution (or primarily its geometrical part) at first exclusively on its own,
+        as if it were a present day code breaking problem,
+        and only after we have already analyzed thoroughly the procedure on this assumption,
+        should we turn our attention to the historical question and to
+        the issues around it.
+      </p>
+      <p>
+        As to the encoding algorithm, as a first step it could be sufficient to
+        have one that would be able to construct a normalized initial layout
+        from a state similar to that in the <a href="step07.html" title="Step 7: The Control Phase">control phase</a>.
+        Obviously, it would be much more difficult to build this initial layout
+        from the very final state, as in <a href="step11.html" title="Step 11: The Final Figure">step 11</a>,
+        because in this case we would have to define operations and procedures
+        for recognizing similarities between shapes, which task could easily turn out to be
+        too heuristic for the computational technology of today.
+        But, of course, it would be great to have such an algorithm, and we
+        could even use it or one of its modified versions for encoding and decoding
+        messages, which can be represented by shapes and layout configurations in some analogous way.
+      </p>
+      <h3 id="astronomy"><a class="anchor" href="#astronomy"></a>Astronomical examinations</h3>
+      <p>
+        If the solution proves to be true, it could then be advisable
+        to examine the nearby solar systems even more carefully,
+        and search for such binary systems whose distance from the Sun
+        is around 13 light years,
+        and have three inner and three outer planets
+        (as depicted on the supposed <a href="step03.html#a8b2" title="Step 3: The Interstellar Travel">diagram</a> of the other system).
+        Ideally, only one system would satisfy all the conditions, and
+        then it could be an obvious candidate to search for extra-terrestrial life.
+      </p>
+      <div class="next-page">
+        <a href="story.html" title="The Story Behind the Solution">Next Page: The Story Behind the Solution</a>
+      </div>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fftasks.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fftasks.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fftasks.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fftasks.html&amp;title=Further%20Tasks%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fftasks.html&amp;title=Further%20Tasks%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fftasks.html&amp;title=Further%20Tasks%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=Further%20Tasks%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fftasks.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>

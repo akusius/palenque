@@ -1,0 +1,17 @@
+*  text=auto
+
+*.css  text
+*.html  text eol=lf
+*.js  text
+*.pqs  text eol=lf
+*.properties  text
+*.xml  text
+
+*.gif  binary
+*.ico  binary
+*.jpg  binary
+*.mp4  binary
+*.png  binary
+*.webm  binary
+*.xcfgz  binary
+*.zip  binary

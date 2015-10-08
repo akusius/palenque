@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4: The Item Layout | The Palenque Code</title>
+    <meta name="description" content="Solving the code in 12 steps: in step 4 we build a new, normalized layout from the relevant items of the lid's upper portion.">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="http://akusius.github.io/palenque/step04.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://akusius.github.io/palenque/step04.html">
+    <meta property="og:title" content="Step 4: The Item Layout | The Palenque Code">
+    <meta property="og:description" content="Solving the code in 12 steps: in step 4 we build a new, normalized layout from the relevant items of the lid's upper portion.">
+    <meta property="og:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akusius.github.io/palenque/step04.html">
+    <meta name="twitter:title" content="Step 4: The Item Layout | The Palenque Code">
+    <meta name="twitter:description" content="Solving the code in 12 steps: in step 4 we build a new, normalized layout from the relevant items of the lid's upper portion.">
+    <meta name="twitter:image" content="http://akusius.github.io/palenque/media/social_logo.png">
+    <script type="text/javascript" src="js/analytics.js"></script>
+    <style>
+      table.item-data th {
+        width: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="./" title="Front page">The Palenque Code</a></h1>
+      <h2>Step 4: The Item Layout</h2>
+    </div>
+    <div id="navigation">
+      <a href="step03.html" accesskey="p" class="prev" title="Step 3: The Interstellar Travel">&larr;</a>
+      <a href="steps.html" accesskey="u" class="up" title="Solving the Code in 12 Steps">&uarr;</a>
+      <a href="step05.html" accesskey="n" class="next" title="Step 5: The Three Rotations">&rarr;</a>
+    </div>
+    <div id="content">
+      <p>
+        At the end of <a href="step02.html" title="Step 2: Layering and Rotating">step 2</a> we came to the conclusion
+        that a clean and normalized version of the upper part would be required,
+        which then could enable us to examine further the triplets' connection
+        to each other after the three rotations.
+        Hence, in this step we will sort out the items we are interested in,
+        and place them in a coordinate system appropriate for performing
+        the rotations (and for the following operations as well).
+      </p>
+      <p>
+        Creating the coordinate system is the easier part of the task.
+        We will simply use a two dimensional system with its origin placed at the
+        center of the upper part,
+        the X coordinates increasing to the right
+        and the Y coordinates to the top:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s04i01.png">
+          <img src="media/s04i01.png" alt="Coordinate system">
+        </a>
+      </div>
+      <p class="note">
+        Note: at some steps we will also use the third dimension temporarily,
+        but for the layout of the items the Z coordinate is not necessary.
+      </p>
+      <p>
+        As to choosing the appropriate items and placing them properly in the system,
+        the situation is a bit more complicated.
+        Such processes usually require more iterations,
+        and only at a later stage will become definitely certain (or at least probable),
+        that we made the right decisions previously.
+        Here, in case of the Palenque code, the control phase at <a href="step07.html" title="Step 7: The Control Phase">step 7</a>
+        will provide us such an opportunity to check our starting layout, and,
+        according the picture there, we must potentially come back to this step, rearrange
+        some items and then perform the operations again, and so on, until all
+        elements are placed in a satisfactory way.
+      </p>
+      <p id="a38c">
+        It would not make much sense to go through the entire iteration process here,
+        and so I only present the layout that I have found to be the most suitable one.
+        However, a separate (Java) application was created (<a href="applay.html" title="PalenqueLayout (Java Application)">PalenqueLayout</a>),
+        that you can use to test this and other arrangements, and, after performing the steps up to
+        the control phase and inspecting the corresponding end result you can form your
+        own opinion about the layout presented here and the decisions made at this step.
+        (For further information about the application and its usage please
+        refer to <a href="applay.html" title="PalenqueLayout (Java Application)">the page describing it</a>).
+      </p>
+      <p>
+        From among the triplets we will use all, except those two
+        that already played their roles in <a href="step03.html#ad7e" title="Step 3: The Interstellar Travel">the previous step</a> (as parts of the diagram of the Solar System).
+        Additionally, considering the message we expect from solving the code (the location of the
+        other system), we would also need of course a representation for the stars
+        of the two solar systems.
+        If we take a look at the lid, we can find two starlike symbols
+        that seem to be there for this exact purpose, and their positions
+        (left / right side) determine unambiguously, which solar system they belong to:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s04i02.png">
+          <img src="media/s04i02.png" alt="Solar system stars">
+        </a>
+      </div>
+      <p id="a9e2">
+        Now we have every information to choose the items for the arrangement.
+        Here you can see them marked with their respective reference numbers
+        (the numbers were <a href="applay.html#a51f" title="Function descriptions | PalenqueLayout (Java Application)">arbitrarily defined</a>, and serve only the purpose of referring
+        to the elements):
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s04i03.png">
+          <img src="media/s04i03.png" alt="The items of the layout">
+        </a>
+      </div>
+      <p id="a36c" class="note">
+        Note: About the issue with item #6, whether it should be treated as a triplet or
+        not, you can read more <a href="issues.html#item6" title="The issue with item #6 | Issues and Uncertainties">here</a>.
+        Long story short: initially, due to the sketchy drawing I considered it to
+        be a triplet, and, because of its size and position,
+        I personally am inclined even now to believe
+        that it <em>should have been</em> a triplet,
+        but was carved wrongly. However, the matter has no real relevance,
+        as the items at the corners (#6, #8, #10) play only a subordinate
+        and temporary part during the solution.
+        By the way, it is obvious that the craftsmen who actually carved the lid had
+        absolutely no idea of any hidden code in the drawing, as the pattern is full
+        of issues in this regard: the triplets have different sizes, they are not
+        arranged vertically, etc.
+        The iterations between this step and the control phase are mostly needed
+        to compensate for these inaccuracies introduced by the careless carving.
+      </p>
+      <p id="afab">
+        After placing the items in the coordinate system we finally get the layout:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s04i04.png">
+          <img src="media/s04i04.png" alt="The layout">
+        </a>
+      </div>
+      <p>
+        The following table shows the exact coordinates for each item
+        (the triplets measure 1&times;3, the two stars 3&times;3,
+        and all coordinates apply to the center subelement):
+      </p>
+      <table class="item-data">
+        <thead>
+          <tr>
+            <th title="Number">#</th>
+            <th title="Type">Type</th>
+            <th title="X coordinate">X</th>
+            <th title="Y coordinate">Y</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td title="Triplet">T</td>
+            <td>&minus;5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td title="Triplet">T</td>
+            <td>&minus;5</td>
+            <td>&minus;4</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td title="Triplet">T</td>
+            <td>4</td>
+            <td>&minus;4</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td title="Triplet">T</td>
+            <td>&minus;10</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td title="Triplet">T</td>
+            <td>9</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td title="Triplet">T</td>
+            <td>&minus;16</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td title="Triplet">T</td>
+            <td>6</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td title="Triplet">T</td>
+            <td>20</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td title="Triplet">T</td>
+            <td>20</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td title="Triplet">T</td>
+            <td>&minus;16</td>
+            <td>&minus;23</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td title="Sun">S</td>
+            <td>&minus;11</td>
+            <td>&minus;20</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td title="Star">R</td>
+            <td>20</td>
+            <td>&minus;2</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">
+        Note: you can use <a href="applay.html" title="PalenqueLayout (Java Application)">the PalenqueLayout application</a>
+        to export these data in XML, CSV or other formats.
+        The import code for this layout:
+        PQLT9506T9596T0496T9001<wbr>T0901T8417T0620T2020<wbr>T2005T8477S8980R2098
+        (but it is already the default after startup).
+      </p>
+      <p id="af71">
+        Superimposing the normalized layout over the original images reveals
+        the type and amount of correction that was necessary to compensate the carving inaccuracies:
+      </p>
+      <div class="img-wrapper">
+        <a class="img" href="media/s04i05.png">
+          <img src="media/s04i05.png" alt="The layout superimposed over the Greene drawing">
+        </a><br>
+        <a class="img" href="media/s04i06.png">
+          <img src="media/s04i06.png" alt="The layout superimposed over the Cotterell drawing">
+        </a>
+      </div>
+      <p>
+        In this step we have successfully constructed
+        a cleaned and normalized version of the
+        upper part. Using that we will be able
+        to perform the three rotations again,
+        but this time without the distracting superfluous elements at last.
+      </p>
+      <div class="next-page">
+        <a href="step05.html" title="Step 5: The Three Rotations">Continue to the next step</a>
+      </div>
+    </div>
+    <div id="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep04.html" title="Share on Facebook" target="_blank"><span class="facebook"></span></a>
+      <a href="https://twitter.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep04.html&amp;hashtags=PalenqueCode&amp;via=Akusius" title="Share on Twitter" target="_blank"><span class="twitter"></span></a>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep04.html" title="Share on Google+" target="_blank"><span class="gplus"></span></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep04.html&amp;title=Step%204%3A%20The%20Item%20Layout%20%7C%20The%20Palenque%20Code" title="Share on LinkedIn" target="_blank"><span class="linkedin"></span></a>
+      <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep04.html&amp;title=Step%204%3A%20The%20Item%20Layout%20%7C%20The%20Palenque%20Code" title="Share on Tumblr" target="_blank"><span class="tumblr"></span></a>
+      <a href="https://www.reddit.com/submit/?url=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep04.html&amp;title=Step%204%3A%20The%20Item%20Layout%20%7C%20The%20Palenque%20Code" title="Share on Reddit" target="_blank"><span class="reddit"></span></a>
+      <a href="mailto:?subject=Step%204%3A%20The%20Item%20Layout%20%7C%20The%20Palenque%20Code&amp;body=http%3A%2F%2Fakusius.github.io%2Fpalenque%2Fstep04.html" title="Share by email"><span class="email"></span></a>
+    </div>
+    <div id="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="js/disqus.js"></script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </body>
+</html>
