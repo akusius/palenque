@@ -232,6 +232,36 @@ code.block {
   text-align: left;
 }
 
+.next-page {
+  font-style: italic;
+  margin-top: 2em;
+}
+
+#repo-link {
+  font-size: .75em;
+  margin: 0;
+  text-align: right;
+}
+
+#repo-link a {
+  opacity: .5;
+}
+
+#repo-link a:hover {
+  opacity: 1;
+}
+
+#repo-link span {
+  background: url(../media/repo.png);
+  display: inline-block;
+  height: 20px;
+  width: 15px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 2px;
+  opacity: .5;
+}
+
 #share {
   text-align: right;
   overflow: hidden;
