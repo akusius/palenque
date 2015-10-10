@@ -38,7 +38,7 @@
       <a href="author.html" accesskey="n" class="next" title="About the Author">&rarr;</a>
     </div>
     <div id="content">
-      <p>
+      <p id="acba"><a class="anchor" href="#acba"></a>
         In this appendix all states and transformations of the solution process
         have been collected.
         For each state, a computer processable file was generated (about its format see the <a href="#pqs-format">section at the bottom</a>), which is accessible
@@ -294,16 +294,16 @@
         </a>
       </div>
       <h3 id="pqs-format"><a class="anchor" href="#pqs-format"></a>State file format</h3>
-      <p>
+      <p id="a84b"><a class="anchor" href="#a84b"></a>
         The Palenque state file (PQS) describes a state in the transformational process.
         It is a 7-bit ASCII text (no special characters are used),
         where the newline is always represented exclusively by the line feed (<code>0x0A</code>) character (Unix mode).
       </p>
-      <p>
+      <p id="a4a0"><a class="anchor" href="#a4a0"></a>
         The first line of the file contains the "<code>PQS</code>" string, a space (<code>0x20</code>) separator,
         and the zero padded, two characters long state number (e.g. <code>PQS 03</code>).
       </p>
-      <p>
+      <p id="a61c"><a class="anchor" href="#a61c"></a>
         After an empty line, the coordinate system and its content is described
         in 51 rows and 51 columns, where each cell is represented by one of the following characters:
       </p>
@@ -351,7 +351,7 @@
           </tr>
         </tbody>
       </table>
-      <p>
+      <p id="ad8e"><a class="anchor" href="#ad8e"></a>
         After an empty line, the item statistics follow
         in 3 lines for the Q, S and R items consecutively,
         for each line with the format:
@@ -369,7 +369,7 @@
           </ol>
         </li>
       </ol>
-      <p class="note">
+      <p class="note" id="ac8b"><a class="anchor" href="#ac8b"></a>
         Note: The state files were generated with the help of the
         <a class="external" href="https://github.com/akusius/palenque-animation/blob/master/src/hu/akusius/palenque/animation/rendering/StateAnalyzer.java"><code>StateAnalyzer</code></a> class
         of the <a href="appanim.html" title="PalenqueAnimation (Java Application)">PalenqueAnimation</a> application.

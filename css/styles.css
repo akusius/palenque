@@ -105,8 +105,16 @@ a.anchor {
   visibility: hidden;
 }
 
+p a.anchor {
+  opacity: .1;  
+}
+
 a.anchor:after {
   content: '¶';
+}
+
+a.anchor:hover {
+  opacity: .4;
 }
 
 a.anchor:hover,
