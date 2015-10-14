@@ -143,15 +143,26 @@ jQuery(function ($) {
     return this.loadState.get() === "toload";
   };
   Toc.prototype.filter = function (s) {
-    s = s.toLowerCase();
     this.$toc.find("li").removeClass("hidden visible-child");
 
     if (s) {
+      var words = s.toLowerCase().split(/[\s,]+/).filter(Boolean);
+
       this.$toc.find(".page").each(function () {
-        if (this.innerHTML.toLowerCase().indexOf(s) < 0) {
-          $(this).closest("li").addClass("hidden");
-        } else {
+        var text = this.innerHTML.toLowerCase();
+        var match = true;
+
+        $.each(words, function () {
+          if (text.indexOf(this) < 0) {
+            match = false;
+            return false;
+          }
+        });
+
+        if (match) {
           $(this).parentsUntil("#toc", "li").slice(1).addClass("visible-child");
+        } else {
+          $(this).closest("li").addClass("hidden");
         }
       });
     }
