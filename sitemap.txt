@@ -7,6 +7,7 @@ http://akusius.github.io/palenque/apps.html
 http://akusius.github.io/palenque/author.html
 http://akusius.github.io/palenque/ftasks.html
 http://akusius.github.io/palenque/issues.html
+http://akusius.github.io/palenque/overview.html
 http://akusius.github.io/palenque/step01.html
 http://akusius.github.io/palenque/step02.html
 http://akusius.github.io/palenque/step03.html

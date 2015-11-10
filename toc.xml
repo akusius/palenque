@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <Toc>
   <Page name="index.html" title="The Palenque Code" desc="Is there a secret message hidden in the cover pattern of the Palenque sarcophagus lid? Trying to break the geometrical code with the help of many animations and pictures.">
+    <Page name="overview.html" title="Quick Overview | The Palenque Code" desc="A quick overview of solving the Palenque code in 12 steps."/>
     <Page name="steps.html" title="Solving the Code in 12 Steps | The Palenque Code" desc="Introduction to the (potential) solution of the Palenque code in 12 steps. A brief overview of the theory about the sarcophagus lid containing a hidden message in its pattern.">
       <Page name="step01.html" title="Step 1: First Findings | The Palenque Code" desc="Solving the code in 12 steps: in step 1 we start to recognize peculiarities in the drawing of the sarcophagus lid."/>
       <Page name="step02.html" title="Step 2: Layering and Rotating | The Palenque Code" desc="Solving the code in 12 steps: in step 2 we duplicate the lid picture and layer it over itself in a rotated configuration. Quite interestingly, the triplets inside start to connect to each other."/>
