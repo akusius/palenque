@@ -35,6 +35,6 @@ img.icon {
   height: 30px;
   border: 1px solid #779;
   border-radius: 5px;
-  background-color: #F4F4F4;
-  background-image: linear-gradient(180deg, #F4F4F4, #D9DCE4, #F4F4F4);
+  background-color: #f4f4f4;
+  background-image: linear-gradient(180deg, #f4f4f4, #d9dce4, #f4f4f4);
 }
